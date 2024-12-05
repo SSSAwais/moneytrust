@@ -413,7 +413,7 @@ const Calculator = ({ setCartData = () => {} }) => {
   }, []);
 
   return (
-    <div className="bg-white border border-gray-400 shadow-lg w-full max-w-[550px] w-full rounded-[16px]  overflow-hidden  mw-sm4:rounded-none">
+    <div className="bg-white border border-gray-400 shadow-lg w-full max-w-[550px] w-full rounded-[16px]  overflow-hidden  mw-sm4:rounded-none ">
       <div className="flex mx-auto bg-gray-200 rounded-t-[16px] mw-sm4:rounded-none">
         <div
           className={`flex-1 flex justify-center items-center py-5 px-5 md:px-0 text-sm whitespace-nowrap cursor-pointer  md:text-lg font-bold  mw-sm4:text-[12px] ${

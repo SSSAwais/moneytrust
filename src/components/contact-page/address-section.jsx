@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Location from "../Location";
+import Link from "next/link";
 
 const AddressSection = () => {
   const [contactList, setContactList] = useState([
@@ -11,14 +12,14 @@ const AddressSection = () => {
       email: "hi@nurona.com",
     },
     {
-      icons: "/Images/map-pin.svg",
+      icons: "/Images/whatsapp.png",
       heading: "Live chat",
       detail: "Our friendly team is here to help.",
       email: "Start new chat",
     },
     {
-      icons: "/Images/whatsapp.png",
-      heading: "Live chat",
+      icons: "/Images/map-pin.svg",
+      heading: "Live Location",
       detail: "Come say hello at our office HQ.",
       email: "100 Smith Street <br/> Collingwood VIC 3066 ",
     },
@@ -59,11 +60,22 @@ const AddressSection = () => {
                   >
                     {e.detail}
                   </h5>
-                  <p
-                    style={{ fontFamily: "TestSignifier" }}
-                    className="text-[18px] leading-[28px] font-normal text-[#000] mt-[16px] mw-sm4:mt-[8px] mw-md:text-[16px] mw-sm4:text-[12px]"
-                    dangerouslySetInnerHTML={{ __html: e.email }}
-                  ></p>
+                  {e.email === "hi@nurona.com" ? (
+                    <Link href="mailto:hi@nurona.com">
+                      {" "}
+                      <p
+                        style={{ fontFamily: "TestSignifier" }}
+                        className="text-[18px] leading-[28px] font-normal text-[#000] mt-[16px] mw-sm4:mt-[8px] mw-md:text-[16px] mw-sm4:text-[12px]"
+                        dangerouslySetInnerHTML={{ __html: e.email }}
+                      ></p>
+                    </Link>
+                  ) : (
+                    <p
+                      style={{ fontFamily: "TestSignifier" }}
+                      className="text-[18px] leading-[28px] font-normal text-[#000] mt-[16px] mw-sm4:mt-[8px] mw-md:text-[16px] mw-sm4:text-[12px]"
+                      dangerouslySetInnerHTML={{ __html: e.email }}
+                    ></p>
+                  )}
                 </div>
               );
             })}
@@ -76,20 +88,20 @@ const AddressSection = () => {
           <div className="flex justify-between mw-sm4:flex-col">
             <div className="flex flex-col w-[48%] mw-sm4:w-full">
               <label className="font-lexand  font-light text-[14px] leading-[22px] text-[#334054] pb-[6px] mw-sm4:text-[12px]">
-                First Name
+                First name
               </label>
               <input
                 placeholder="First Name"
-                className="border-[#D0D5DD] border font-lexand text-[16px] font-light py-[12px] px-[16px] rounded-[10px] placeholder:font-lexand placeholder:text-[16px] placeholder:font-light placeholder:text-[#667085] text-[#667085] focus:outline-none mw-sm4:text-[12px] mw-sm4:py-[6px] mw-sm4:px-[10px] rounded-[4px] placeholder:text-[12px]"
+                className="border-[#D0D5DD] border font-lexand text-[16px] font-light py-[12px] px-[16px] rounded-[8px] placeholder:font-lexand placeholder:text-[16px] placeholder:font-light placeholder:text-[#667085] text-[#667085] focus:outline-none mw-sm4:text-[12px] mw-sm4:py-[6px] mw-sm4:px-[10px] rounded-[4px] mw-sm4:placeholder:text-[12px] "
               />
             </div>
             <div className="flex flex-col w-[48%] mw-sm4:w-full mw-sm4:mt-[8px]">
-              <label className="font-lexand  font-light text-[14px] leading-[22px] text-[#334054] pb-[6px] mw-sm4:text-[12px]">
-                Last Name
+              <label className="font-lexand  font-light text-[14px] leading-[22px] text-[#334054] pb-[6px] mw-sm4:text-[12px] ">
+                Last name
               </label>
               <input
                 placeholder="Last Name"
-                className="border-[#D0D5DD] border font-lexand text-[16px] font-light py-[12px] px-[16px] rounded-[10px] placeholder:font-lexand placeholder:text-[16px] placeholder:font-light placeholder:text-[#667085] text-[#667085] focus:outline-none mw-sm4:text-[12px] mw-sm4:py-[6px] mw-sm4:px-[10px] rounded-[4px] placeholder:text-[12px]"
+                className="border-[#D0D5DD] border font-lexand text-[16px] font-light py-[12px] px-[16px] rounded-[8px] placeholder:font-lexand placeholder:text-[16px] placeholder:font-light placeholder:text-[#667085] text-[#667085] focus:outline-none mw-sm4:text-[12px] mw-sm4:py-[6px] mw-sm4:px-[10px] rounded-[4px] mw-sm4:placeholder:text-[12px] "
               />
             </div>
           </div>
@@ -99,7 +111,7 @@ const AddressSection = () => {
             </label>
             <input
               placeholder="you@company.com"
-              className="border-[#D0D5DD] border font-lexand text-[16px] font-light py-[12px] px-[16px] rounded-[10px] placeholder:font-lexand placeholder:text-[16px] placeholder:font-light placeholder:text-[#667085] text-[#667085] focus:outline-none mw-sm4:text-[12px] mw-sm4:py-[6px] mw-sm4:px-[10px] rounded-[4px] placeholder:text-[12px]"
+              className="border-[#D0D5DD] border font-lexand text-[16px] font-light py-[12px] px-[16px] rounded-[8px] placeholder:font-lexand placeholder:text-[16px] placeholder:font-light placeholder:text-[#667085] text-[#667085] focus:outline-none mw-sm4:text-[12px] mw-sm4:py-[6px] mw-sm4:px-[10px] rounded-[4px] mw-sm4:placeholder:text-[12px]"
             />
           </div>
           <div className="flex flex-col pt-[24px] mw-sm4:pt-[8px]">
@@ -108,7 +120,7 @@ const AddressSection = () => {
             </label>
             <input
               placeholder="+123 456789123"
-              className="border-[#D0D5DD] border font-lexand text-[16px] font-light py-[12px] px-[16px] rounded-[10px] placeholder:font-lexand placeholder:text-[16px] placeholder:font-light placeholder:text-[#667085] text-[#667085] focus:outline-none mw-sm4:text-[12px] mw-sm4:py-[6px] mw-sm4:px-[10px] rounded-[4px] placeholder:text-[12px]"
+              className="border-[#D0D5DD] border font-lexand text-[16px] font-light py-[12px] px-[16px] rounded-[8px] placeholder:font-lexand placeholder:text-[16px] placeholder:font-light placeholder:text-[#667085] text-[#667085] focus:outline-none mw-sm4:text-[12px] mw-sm4:py-[6px] mw-sm4:px-[10px] rounded-[4px] mw-sm4:placeholder:text-[12px]"
             />
           </div>
           <div className="flex flex-col pt-[24px] mw-sm4:pt-[8px]">
@@ -117,23 +129,23 @@ const AddressSection = () => {
             </labe>
             <textarea
               rows={5}
-              className="border-[#D0D5DD] border font-lexand text-[16px] font-light py-[12px] px-[16px] rounded-[10px] placeholder:font-lexand placeholder:text-[16px] placeholder:font-light placeholder:text-[#667085] text-[#667085] focus:outline-none mw-sm4:text-[12px] mw-sm4:py-[6px] mw-sm4:px-[10px] rounded-[4px] placeholder:text-[12px]"
+              className="border-[#D0D5DD] border font-lexand text-[16px] font-light py-[12px] px-[16px] rounded-[8px] placeholder:font-lexand placeholder:text-[16px] placeholder:font-light placeholder:text-[#667085] text-[#667085] focus:outline-none mw-sm4:text-[12px] mw-sm4:py-[6px] mw-sm4:px-[10px] rounded-[4px] mw-sm4:placeholder:text-[12px]"
             ></textarea>
           </div>
           <div className="pt-[24px] mw-sm4:pt-[8px]">
-            <label className="flex items-center space-x-2">
+            <label className="flex items-center ">
               <input
                 type="checkbox"
                 className="border-[#D0D5DD] border w-[20px] h-[20px] rounded-[6px] appearance-none checked:bg-blue-500 checked:border-blue-500 checked:before:content-['✔'] checked:before:text-white checked:before:block checked:before:text-center checked:before:leading-[20px] mw-sm4:text-[12px]  "
                 placeholder="Message"
               />
-              <span className="font-lexand font-light leading-[24px] text-[#344054] text-[16px]  mw-sm4:text-[12px]">
+              <span className="font-lexand font-light leading-[24px] ml-[12px] text-[#667085] text-[16px]  mw-sm4:text-[12px]">
                 You agree to our friendly privacy policy.
               </span>
             </label>
           </div>
-          <button className="font-lexand font-normal text-[20px] leading-[30px] text-[#fff] bg-[#015180] py-[14px] text-center w-[100%] rounded-[50px] mt-[40px] mw-sm4:text-[12px] mw-sm4:py-[6px] mw-sm4:px-[10px]">
-            Send Message
+          <button className="font-lexand font-normal text-[20px] leading-[30px] text-[#fff] bg-[#015180] py-[14px] text-center w-[100%] rounded-[50px] mt-[40px] mw-sm4:text-[12px] mw-sm4:py-[6px] mw-sm4:px-[10px] border border-[#0066FF]">
+            Send message
           </button>
         </div>
       </div>

@@ -32,3 +32,9 @@
 .slick-dots {
   bottom: -30px;
 }
+@media screen and (max-width: 576px) {
+  .slick-dots li {
+    width: 18px; /* Width of each dot */
+    height: 3px; /* Height of each dot */
+  }
+}
