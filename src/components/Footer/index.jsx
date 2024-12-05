@@ -51,7 +51,7 @@ const Footer = () => {
           <div className="flex w-[50%] mw-lg:w-[100%]">
             <div className="w-[50%]">
               <h3 className="font-semibold font-lexand  text-[16px] leading-[24px] text-[#000] mb-[16px]">
-                Column One
+                Quick Links
               </h3>
               <ul className="">
                 <li className="mb-[8px]">

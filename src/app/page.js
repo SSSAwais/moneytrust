@@ -278,9 +278,14 @@ export default function Home() {
               Our Services At A Glance
             </h1>
             <div className="flex justify-end flex-col items-end gap-2 mw-md:justify-start mw-md:items-start">
+<<<<<<< HEAD
               <p className="sm:text-end text-start max-w-[500px] text-[#707070] mw-xl:text-[14px] mw-md:text-start ">
                 Effortlessly send, receive, and manage your money transfers with
                 confidence using Money Trust's reliable and secure services.
+=======
+              <p className="sm:text-end text-start max-w-[500px] text-[#707070] mw-xl:text-[12px] mw-md:text-start ">
+               Effortlessly send, receive, and manage your money transfers with confidence using Money Trust's reliable and secure services.
+>>>>>>> f574b00a7021dcd85236cba21a4e46f57f52a320
               </p>
               <button className="bg-[#94C99D] text-white hidden md:flex justify-center items-center md:gap-3 gap-2 whitespace-nowrap text-[16px] font-medium  md:px-6 px-3 py-3 rounded-full mt-[23px] mw-xl:text-[14px] mw-xl:py-[10px] mw-xl:px-[20px] ">
                 View More
@@ -299,10 +304,10 @@ export default function Home() {
                     i === 0 ? "text-[#7CBF88]" : ""
                   } text-[#7203E3]`}
                 />
-                <h1 className="font-bold pr-[100px] text-[20px]  text-[#212529] leading-[24px] mt-[39px] mw-lg:text-[18px] mw-md:text-[16px] mw-md:pr-[0px] mw-md:mt-[20px]">
+                <h1 className="font-bold pr-[100px] text-[20px]  text-[#212529] leading-[24px] mt-[39px] mw-lg:text-[18px] mw-md:text-[14px] mw-md:pr-[0px] mw-md:mt-[20px]">
                   {item.title}
                 </h1>
-                <p className="text-end self-end text-[16px] max-w-[90%] text-[#707070] leading-[28px] mt-[40px] mw-md:mt-[20px] mw-md:text-[14px] mw-md:leading-[22px]">
+                <p className="text-end self-end text-[16px] max-w-[90%] text-[#707070] leading-[28px] mt-[40px] mw-md:mt-[20px] mw-md:text-[12px] mw-md:leading-[22px]">
                   {item.desc}
                 </p>
               </div>
