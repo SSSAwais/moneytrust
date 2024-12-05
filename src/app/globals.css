@@ -49,6 +49,9 @@ textarea {
 .font-satoshi {
   font-family: "Satoshi", sans-serif;
 }
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+}
 @font-face {
   font-family: "TestSignifier";
   src: url("/fonts/TestSignifier-Regular.otf") format("opentype");

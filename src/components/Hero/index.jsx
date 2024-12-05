@@ -16,50 +16,52 @@ const Hero = () => {
         background: "linear-gradient(to bottom, #0a457b, #9fd1a4)",
       }}
     >
-      <div className="max-w-[1400px] px-4 sm:px-6 w-full flex  flex-col lg:flex-row items-center gap-10  mw-lg:items-start ">
-        <div className="text-white flex-1 space-y-4">
+      <div className="max-w-[1400px] px-4 sm:px-6 w-full flex  flex-col lg:flex-row items-center   mw-lg:items-start ">
+        <div className="w-[60%]">
           <div className="flex items-center space-x-4 text-sm mw-md:pt-[22px]">
-            <div className="flex items-center space-x-1">
-              <img
-                src={Images.checkGreen.src}
-                alt="ico"
-                className="md:h-auto h-4"
-              />
-              <span className="text-[14px] md:text-sm whitespace-nowrap mw-sm4:text-[8px]">
-                24/7 Transfer
-              </span>
-            </div>
-            <div className="flex items-center space-x-1">
-              <img
-                src={Images.checkGreen.src}
-                alt="ico"
-                className="md:h-auto h-4"
-              />
-              <span className="text-[14px] md:text-sm whitespace-nowrap mw-sm4:text-[8px]">
-                No Hidden Fees
-              </span>
-            </div>
-            <div className="flex items-center space-x-1">
-              <img
-                src={Images.checkGreen.src}
-                alt="ico"
-                className="md:h-auto h-4"
-              />
-              <span className="text-[14px] md:text-sm whitespace-nowrap mw-sm4:text-[8px]">
-                Great Exchange Rate
-              </span>
+            <div className="mb-[14px] flex">
+              <div className="flex items-center mr-[18px]">
+                <img
+                  src={Images.checkGreen.src}
+                  alt="ico"
+                  className="md:h-auto h-4 mr-[15px]"
+                />
+                <span className="text-[14px] md:text-sm whitespace-nowrap mw-sm4:text-[8px] text-white">
+                  24/7 Transfer
+                </span>
+              </div>
+              <div className="flex items-center mr-[18px]">
+                <img
+                  src={Images.checkGreen.src}
+                  alt="ico"
+                  className="md:h-auto h-4 mr-[15px]"
+                />
+                <span className="text-[14px] md:text-sm whitespace-nowrap mw-sm4:text-[8px] text-white">
+                  No Hidden Fees
+                </span>
+              </div>
+              <div className="flex items-center mr-[18px]">
+                <img
+                  src={Images.checkGreen.src}
+                  alt="ico"
+                  className="md:h-auto h-4 mr-[15px]"
+                />
+                <span className="text-[14px] md:text-sm whitespace-nowrap mw-sm4:text-[8px] text-white">
+                  Great Exchange Rate
+                </span>
+              </div>
             </div>
           </div>
-          <h1 className="text-[62px] leading-[66px] font-bold mx-14:text-[50px] mw-11:text-[42px] mw-11:leading-[58px] mw-md:text-[38px] mw-sm4:text-[32px] mw-sm4:leading-[36px] mw-sm5:text-[24px] mw-sm5:leading-[26px]">
-            Money Trust Currency <br /> Exchange
+          <h1 className="text-[62px] text-white leading-[66px] font-bold mx-14:text-[50px] mw-11:text-[42px] mw-11:leading-[58px] mw-md:text-[38px] mw-sm4:text-[32px] mw-sm4:leading-[36px] mw-sm5:text-[24px] mw-sm5:leading-[26px]">
+            Fast, Reliable, and Secure Currency Exchange
           </h1>
-          <p className="md:text-[20px] opacity-90 mx-14:text-[18px] mw-md:text-[16px] mw-sm4:text-[14px]">
-            {
-              "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-            }
+          <p className="text-[20px] opacity-90 mx-14:text-[18px] mw-md:text-[16px] mw-sm4:text-[14px] font-satoshi text-white mt-[23px] pr-[110px]">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text e
           </p>
-          <p className="md:text-[20px] opacity-90 !m-0 mx-14:text-[18px] mw-md:text-[16px] mw-sm4:text-[14px]">
-            {"Lorem Ipsum has been the industry's standard dummy text."}
+          <p className="text-[20px] font-bold leading-[30px] text-[#015180] mt-[36px]">
+            Have questions? Call us now at{" "}
+            <span className="text-white"> + 14165742222 </span> to get started!
           </p>
           <div>
             <div className="flex space-x-4 mt-[34px]">
@@ -76,7 +78,7 @@ const Hero = () => {
         </div>
 
         {/* <!-- Right Side Form --> */}
-        <div className="md:flex lg:justify-end flex-1 hidden mw-lg:w-[100%]">
+        <div className="w-[40%] md:flex lg:justify-end flex-1 hidden mw-lg:w-[100%]">
           {/* <HeroCard /> */}
           <Calculator setCartData={setCartData} />
         </div>

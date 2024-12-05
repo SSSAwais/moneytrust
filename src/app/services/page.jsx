@@ -1,59 +1,60 @@
 import PagesHero from "@/components/pagesHero";
 import { Images } from "@/utils/Images";
+import Image from "next/image";
 import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
 const services = [
   {
-    icon: <img src={Images.service1.src} alt="" />,
+    icon: "/Images/dollar.svg",
     title: "Currency Exchange",
     description:
       "A smooth and effective way to meet a range of financial needs to both individual and commercial clients through our currency exchange service.",
   },
   {
-    icon: <img src={Images.service2.src} alt="" />,
+    icon: "/Images/laptop.svg",
     title: "Wire Transfer",
     description:
       "We use a secure network to make it easier for money to move between financial institutions, ensuring that money gets to its destination on time.",
   },
   {
-    icon: <img src={Images.service3.src} alt="" />,
+    icon: "/Images/laptop.svg",
     title: "Ria Money Transfer",
     description:
       "Our Ria Money Transfer service offers people wishing to transfer and receive money worldwide a dependable and easy-to-use option.",
   },
   {
-    icon: <img src={Images.service4.src} alt="" />,
+    icon: "/Images/lock.svg",
     title: "Money Gram Transfers",
     description:
       "One of the best options for individuals who value efficiency in their international financial transactions due to its speedy service.",
   },
   {
-    icon: <img src={Images.service5.src} alt="" />,
+    icon: "/Images/cloud.svg",
     title: "Western Union Transfer",
     description:
       "A desirable choice for individuals who want to get the most for their money due to its dedication to offering reasonably priced services.",
   },
   {
-    icon: <img src={Images.service6.src} alt="" />,
+    icon: "/Images/laptop.svg",
     title: "Foreign Currency Banknotes",
     description:
       "Guarantees a smooth and effective procedure for obtaining the banknotes you require, whether you are a traveler or a business.",
   },
   {
-    icon: <img src={Images.service7.src} alt="" />,
+    icon: "/Images/lock.svg",
     title: "Property Transactions",
     description:
       "Within the ever-changing realm of real estate transactions, our services offer Canada-wide sellers and buyers important assistance.",
   },
   {
-    icon: <img src={Images.service8.src} alt="" />,
+    icon: "/Images/cloud.svg",
     title: "Currency Conversions",
     description:
       "Our all-inclusive service guarantees that our clients may conduct foreign transactions with peace of mind.",
   },
   {
-    icon: <img src={Images.service9.src} alt="" />,
+    icon: "/Images/laptop.svg",
     title: "Paying for College and University",
     description:
       "Pay for college, university, and dormitory registration fees across Canada.",
@@ -76,8 +77,14 @@ const page = () => {
                 key={index}
                 className="bg-white rounded-[7px] shadow-lg p-6 flex flex-col items-start justify-between"
               >
-                <div className="mw-sm4:w-[38px] mw-sm4:h-[38px]">
-                  {service.icon}
+                <div className="w-[80px] h-[80px] bg-[#e7ebf7] rounded-[50px] flex items-center justify-center mw-md:w-[60px] mw-md:h-[60px]">
+                  <Image
+                    className="mw-md:w-[30px] mw-md:h-[30px]"
+                    src={service.icon}
+                    alt=""
+                    width={39}
+                    height={39}
+                  />
                 </div>
                 <h3 className="text-[20px] leading-[20px] font-Figtree text-[#0d0e10] font-bold  mt-[29px] mw-lg:text-[18px] mw-md:text-[16px]  mw-sm4:text-[14px]  mw-sm5:text-[12px] mw-sm4:mt-[15px]">
                   {service.title}

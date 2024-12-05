@@ -11,9 +11,9 @@ const Footer = () => {
   return (
     <footer className="bg-white py-[78px] mw-lg:pb-[50px] mw-lg:pt-[25px]">
       <div className="max-w-[1400px] px-4 sm:px-6 lg:px-8 mx-auto">
-        <div className="flex   md:px-0 flex-row gap-10 mw-lg:flex-col	">
+        <div className="flex   md:px-0 flex-row gap-10 mw-lg:flex-col">
           {/* Logo and Newsletter */}
-          <div className="flex-1 flex flex-col items-start ">
+          <div className="flex flex-col items-start w-[50%] mw-lg:w-[100%]">
             <Image
               src={Images.HeaderLogo.src} // Replace with your logo path
               alt="Logo"
@@ -49,62 +49,8 @@ const Footer = () => {
               and consent to receive updates from our company.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 flex-1">
-            {/* Links Columns */}
-            <div className="col-span-1">
-              <h3 className="font-semibold font-lexand  text-[16px] leading-[24px] text-[#000] mb-[16px]">
-                Column One
-              </h3>
-              <ul className="">
-                <li className="mb-[8px]">
-                  <a
-                    href="#"
-                    className="hover:underline text-[14px] leading-[20px] text-[#000] font-normal mb-[8px]"
-                    style={{ fontFamily: "Satoshi" }}
-                  >
-                    Link One
-                  </a>
-                </li>
-                <li className="mb-[8px]">
-                  <a
-                    href="#"
-                    className="hover:underline text-[14px] leading-[20px] text-[#000] font-normal"
-                    style={{ fontFamily: "Satoshi" }}
-                  >
-                    Link Two
-                  </a>
-                </li>
-                <li className="mb-[8px]">
-                  <a
-                    href="#"
-                    className="hover:underline text-[14px] leading-[20px] text-[#000] font-normal "
-                    style={{ fontFamily: "Satoshi" }}
-                  >
-                    Link Three
-                  </a>
-                </li>
-                <li className="mb-[8px]">
-                  <a
-                    href="#"
-                    className="hover:underline text-[14px] leading-[20px] text-[#000] font-normal "
-                    style={{ fontFamily: "Satoshi" }}
-                  >
-                    Link Four
-                  </a>
-                </li>
-                <li className="mb-[8px]">
-                  <a
-                    href="#"
-                    className="hover:underline text-[14px] leading-[20px] text-[#000] font-normal "
-                    style={{ fontFamily: "Satoshi" }}
-                  >
-                    Link Five
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="col-span-1">
+          <div className="flex w-[50%] mw-lg:w-[100%]">
+            <div className="w-[50%]">
               <h3 className="font-semibold font-lexand  text-[16px] leading-[24px] text-[#000] mb-[16px]">
                 Column One
               </h3>
@@ -157,8 +103,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Social Media Links */}
-            <div className="col-span-1">
+            <div className="w-[50%]">
               <h3 className="font-semibold font-lexand  text-[16px] leading-[24px] text-[#000] mb-[16px]">
                 Follow Us
               </h3>
