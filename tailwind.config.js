@@ -21,7 +21,7 @@ module.exports = {
         "mw-12": { max: "1200px" },
         "mw-11": { max: "1100px" },
         // => @media (max-width: 1279px) { ... }
-        "mw-lg": { max: "1024px" },
+        "mw-lg": { max: "1023px" },
         "mw-9": { max: "900px" },
         // => @media (max-width: 1023px) { ... }
         "mw-md": { max: "768px" },

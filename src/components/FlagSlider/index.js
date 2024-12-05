@@ -11,7 +11,7 @@ const FlagSlider = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows: false,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
     responsive: [

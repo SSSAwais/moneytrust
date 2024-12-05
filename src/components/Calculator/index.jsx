@@ -8,6 +8,7 @@ import "./exchange.css";
 import OrderFormModal from "../OrderFormModal";
 import { Images } from "@/utils/Images";
 import OrderFormModal2 from "../OrderFormModal2";
+import Image from "next/image";
 const API_KEY = "cur_live_J7nMmu9sTuSG8QLkh7fY1PEL8UnE8331PtS3qcpx";
 const API_BASE_URL = "https://api.currencyapi.com/v3";
 const Calculator = ({ setCartData = () => {} }) => {
@@ -160,7 +161,7 @@ const Calculator = ({ setCartData = () => {} }) => {
       ...provided,
       display: "flex",
       alignItems: "center",
-      gap: "10px", // Space between flag and text
+      gap: "0px", // Space between flag and text
       padding: "10px", // Padding for dropdown items
     }),
     singleValue: (provided) => ({
@@ -412,11 +413,13 @@ const Calculator = ({ setCartData = () => {} }) => {
   }, []);
 
   return (
-    <div className="bg-white border border-gray-400 shadow-lg w-full max-w-[450px] w-full rounded-[16px] h-fit lg:min-h-[513px] overflow-hidden">
-      <div className="flex mx-auto bg-gray-200 rounded-t-[16px]">
+    <div className="bg-white border border-gray-400 shadow-lg w-full max-w-[550px] w-full rounded-[16px]  overflow-hidden  mw-sm4:rounded-none">
+      <div className="flex mx-auto bg-gray-200 rounded-t-[16px] mw-sm4:rounded-none">
         <div
-          className={`flex-1 flex justify-center items-center py-5 px-5 md:px-0 text-sm whitespace-nowrap cursor-pointer  md:text-lg font-bold ${
-            activeTab === 1 ? "bg-[#015180] text-white  font-normal" : ""
+          className={`flex-1 flex justify-center items-center py-5 px-5 md:px-0 text-sm whitespace-nowrap cursor-pointer  md:text-lg font-bold  mw-sm4:text-[12px] ${
+            activeTab === 1
+              ? "bg-[#015180] text-[24px] text-white  font-normal font-roboto mw-sm4:text-[12px]"
+              : ""
           }`}
           onClick={() => {
             setActiveTab(1);
@@ -427,8 +430,10 @@ const Calculator = ({ setCartData = () => {} }) => {
           Currency Exchange
         </div>
         <div
-          className={`flex-1 flex justify-center items-center py-5 px-5 md:px-0 text-sm whitespace-nowrap cursor-pointer  md:text-lg font-bold ${
-            activeTab === 2 ? "bg-[#015180] text-white  font-normal" : ""
+          className={`flex-1 flex justify-center items-center py-5 px-5 md:px-0 text-sm whitespace-nowrap cursor-pointer  md:text-lg font-bold mw-sm4:text-[12px] ${
+            activeTab === 2
+              ? "bg-[#015180] text-white text-[24px]  font-normal font-roboto mw-sm4:text-[12px]"
+              : ""
           }`}
           onClick={() => setActiveTab(2)}
         >
@@ -436,11 +441,61 @@ const Calculator = ({ setCartData = () => {} }) => {
         </div>
       </div>
       {activeTab === 2 ? (
-        <div className="p-4">
-          <div className="flex mx-auto justify-between items-center mb-2">
-            <div className="text-lg text-black">
-              Current gold price: CAD ${currentGoldPrice.toFixed(2)}/oz
+        <div className="pt-[23px] px-[34px] pb-[51px] mw-sm4:p-[15px]">
+          <div className="border border-[#999999] py-[15px] px-[23px] rounded-[5px] flex justify-between items-center mb-[20px] mw-xl:p-[15px]">
+            <div>
+              <h4 className="text-[24px] text-[#015180] font-semibold font-roboto mw-xl:text-[20px] mw-sm4:text-[16px]">
+                Current Gold Price
+              </h4>
+              <p className="text-[24px] text-[#015180] font-semibold font-roboto mw-xl:text-[20px] mw-sm4:text-[16px]">
+                CAD ${currentGoldPrice.toFixed(2)}/oz
+              </p>
             </div>
+            <div className="border-l-2 border-[#E6E6E6] relative">
+              <div
+                className="w-[45px] h-[45px] bg-[#94C99D] rounded-[50px] flex items-center justify-center ml-[15px]
+              "
+              >
+                <Image src={"/Images/cart.png"} alt="" width={18} height={18} />
+                <div className="absolute top-0 right-0">
+                  <p className=" text-[10px] text-[#fff] bg-[#015180] w-[13px] h-[13px] rounded-[50px] flex justify-center items-center ">
+                    {cart.length}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {products.map((product) => {
+            return (
+              <div className="bg-[#DFF3FF] py-[15px] px-[23px] flex justify-between mb-[10px] mw-xl:p-[15px]">
+                <div className="flex items-center">
+                  <Image
+                    src={"/Images/goldbar.png"}
+                    alt=""
+                    width={62}
+                    height={48}
+                    className="mw-sm4:w-[36px] mw-sm4:h-[26px]"
+                  />
+                  <div className="ml-[13px] mw-xl:ml-[8px]">
+                    <h4 className="text-[16px] leading-[24px] text-[#015180] font-roboto font-semibold mw-xl:text-[14px] mw-sm4:text-[12px]">
+                      {product.name}
+                    </h4>
+                    <p className="font-roboto text-[18px] leading-[21px] font-normal text-[#596166] mw-xl:text-[16px] mw-sm4:text-[12px]">
+                      CAD ${product.price.toFixed(2)}
+                    </p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => addToCart(product)}
+                  className="font-roboto text-[16px] leading-[24px] font-medium text-white bg-[#015180] py-[10px] px-[25px] rounded-[50px] mw-xl:text-[14px] mw-11:px-[20px] mw-sm4:text-[12px] mw-sm5:px-[15px]"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            );
+          })}
+
+          {/* <div className="flex mx-auto justify-between items-center mb-2">
             <div className="flex items-center space-x-3">
               <span className="font-medium text-black ">
                 Cart ({cart.length})
@@ -449,9 +504,9 @@ const Calculator = ({ setCartData = () => {} }) => {
                 ${getCartTotal().toFixed(2)}
               </span>
             </div>
-          </div>
+          </div> */}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 gap-y-5 mx-auto mb-2">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 gap-y-5 mx-auto mb-2">
             {products.map((product) => (
               <div
                 key={product.id}
@@ -484,7 +539,7 @@ const Calculator = ({ setCartData = () => {} }) => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
 
           {cart.length > 0 && (
             <div className="">
@@ -504,7 +559,7 @@ const Calculator = ({ setCartData = () => {} }) => {
                             className="w-9 h-9 object-contain"
                           />
                           <div>
-                            <h4 className="sm:min-w-auto min-w-40 font-medium">
+                            <h4 className="sm:min-w-auto min-w-40 font-medium ">
                               {item.name}
                             </h4>
                             <p className="text-blue-600">
@@ -561,89 +616,131 @@ const Calculator = ({ setCartData = () => {} }) => {
           className={`exchange-form ${isFormActive ? "active" : ""}`}
           id="currencyForm"
         >
-          <div className="form-group border border-[#e0e0e0] rounded-[5px] px-[22px] py-[20px]">
-            <label className=" font-roboto text-[14px] font-light">
-              Sell/Send
-            </label>
-            <div className="input-group">
-              <input
-                type="text"
-                className="amount-input font-roboto text-[24px] text-[#666666] font-semibold "
-                value={sendAmount}
-                onChange={(e) => setSendAmount(e.target.value)}
-              />
-              <Select
-                options={options.map((currency) => ({
-                  value: currency.value,
-                  label: (
-                    <>
-                      <CurrencyFlag currency={currency.code} size="lg" />{" "}
-                      {currency.code}
-                    </>
-                  ),
-                }))}
-                styles={customStyles}
-                placeholder="Select Currency"
-                value={sendCurrency}
-                onChange={(currency) => setSendCurrency(currency)}
-              />
+          <div className=" border border-[#e0e0e0] rounded-[5px] pl-[16px] pr-[9px] py-[12px] mb-[30px] mw-sm4:mb-[15px] mw-sm4:py-[6px]">
+            <div className="input-group justify-between">
+              <div className="flex flex-col">
+                <label className=" font-roboto text-[14px] font-light mw-sm4:text-[12px]">
+                  Sell/Send
+                </label>
+                <input
+                  type="text"
+                  className="amount-input font-roboto text-[24px] text-[#666666] font-semibold focus:outline-none border-none mw-lg:text-[20px] mw-md:text-[16px] mw-sm4:text-[12px]"
+                  value={sendAmount}
+                  onChange={(e) => setSendAmount(e.target.value)}
+                />
+              </div>
+              <div className="border-l-2 border-[#e6e6e6]">
+                <Select
+                  options={options.map((currency) => ({
+                    value: currency.value,
+                    label: (
+                      <>
+                        <CurrencyFlag currency={currency.code} size="lg" />{" "}
+                        {currency.code}
+                      </>
+                    ),
+                  }))}
+                  styles={customStyles}
+                  placeholder="Select Currency"
+                  value={sendCurrency}
+                  onChange={(currency) => setSendCurrency(currency)}
+                />
+              </div>
             </div>
           </div>
 
-          <div className="rate-display">
-            <span className="rate-text">
-              1 {sendCurrency.value}→
+          <div className="border border-[#e0e0e0] rounded-[5px] pl-[16px] pr-[9px] py-[12px] mw-sm4:py-[6px]">
+            <div className="input-group justify-between">
+              <div className="flex flex-col">
+                <label className=" font-roboto text-[14px] font-light mw-sm4:text-[12px]">
+                  Sell/Send
+                </label>
+                <input
+                  type="text"
+                  className="amount-input font-roboto text-[24px] text-[#666666] font-semibold focus:outline-none border-none mw-lg:text-[20px] mw-md:text-[16px] mw-sm4:text-[12px]"
+                  value={receiveAmount}
+                />
+              </div>
+              <div className="border-l-2 border-[#e6e6e6]">
+                <Select
+                  options={options.map((currency) => ({
+                    value: currency.value,
+                    label: (
+                      <>
+                        <CurrencyFlag currency={currency.code} size="lg" />{" "}
+                        {currency.code}
+                      </>
+                    ),
+                  }))}
+                  styles={customStyles}
+                  placeholder="Select Currency"
+                  value={receiveCurrency}
+                  onChange={(currency) => setReceiveCurrency(currency)}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="mt-[29px] mb-[29px] mw-sm4:mt-[16px] mw-sm4:mb-[5px]">
+            <p className="rate-text font-roboto text-[24px] font-medium text-[#2d2d2d] leading-[28px] mb-[5px] mw-13:text-[20px] mw-md:text-[16px] mw-sm4:text-[12px] mw-sm4:leading-[14px]">
+              1 {sendCurrency.value}=
               {exchangeRates[
                 `${sendCurrency.value}-${receiveCurrency.value}`
               ]?.toFixed(4)}{" "}
               {receiveCurrency.value}
-            </span>
-            <button className="swap-button" onClick={swapCurrencies}>
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                fill="none"
-              >
-                <path
-                  d="M7 10l5-5 5 5M7 14l5 5 5-5"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
+            </p>
 
-          <div className="form-group">
-            <label className="form-label">You receive</label>
-            <div className="input-group">
-              <input
-                type="text"
-                className="amount-input"
-                value={receiveAmount}
-                readOnly
+            <p className="rate-text font-roboto text-[24px] font-medium text-[#2d2d2d] leading-[28px] mw-13:text-[20px] mw-13:text-[20px] mw-md:text-[16px] mw-sm4:text-[12px] mw-sm4:leading-[14px]">
+              1 {receiveCurrency.value}=
+              {exchangeRates[
+                `${receiveCurrency.value}-${sendCurrency.value}`
+              ]?.toFixed(4)}{" "}
+              {sendCurrency.value}
+            </p>
+          </div>
+          <div className="flex">
+            <div className="flex">
+              <Image
+                src={"Images/yellowtick.svg"}
+                alt=""
+                width={20}
+                height={20}
               />
-              <Select
-                options={options.map((currency) => ({
-                  value: currency.value,
-                  label: (
-                    <>
-                      <CurrencyFlag currency={currency.code} size="lg" />{" "}
-                      {currency.code}
-                    </>
-                  ),
-                }))}
-                styles={customStyles}
-                placeholder="Select Currency"
-                value={receiveCurrency}
-                onChange={(currency) => setReceiveCurrency(currency)}
+              <h4 className="font-normal text-[14px] leading-[27px] text-[#5b5b5b] ml-[15px] mw-sm4:text-[12px] mw-sm4:ml-[2px]">
+                No Hidden fees
+              </h4>
+            </div>
+            <div className="flex ml-[18px]">
+              <Image
+                src={"Images/yellowtick.svg"}
+                alt=""
+                width={20}
+                height={20}
+                className="mw-sm4:w-[15px] mw-sm4:h-[15px]"
               />
+              <h4 className="font-normal text-[14px] leading-[27px] text-[#5b5b5b] ml-[15px] mw-sm4:text-[12px] mw-sm4:ml-[2px]">
+                Great Exchange rate
+              </h4>
             </div>
           </div>
-
-          <div className="payment-section">
+          <div className="mt-[29px] flex mw-sm4:mt-[12px]">
+            <div className="">
+              <h5 className="font-roboto text-[16px] leading-[18px] text-[#5b5b5b] pb-[29px] mw-md:text-[14px] mw-sm4:text-[12px] mw-sm4:text-[12px] mw-md:pb-[20px] mw-sm4:pb[16px]">
+                Don't have an account?
+              </h5>
+              <button className="text-[16px] leading-[24px] font-normal text-[#fff] h-[62px] px-[62px] bg-[#015180] rounded-[50px] mw-13:px-[46px] mw-13:h-[56px] mw-md:text-[14px] mw-sm4:text-[14px] mw-sm4:h-[35px] mw-sm4:px-[18px]">
+                Get Started
+              </button>
+            </div>
+            <div className="ml-[17px]">
+              <h5 className="font-roboto text-[16px] leading-[18px] text-[#5b5b5b] pb-[29px] mw-md:text-[14px] mw-sm4:text-[12px] mw-md:pb-[20px] mw-sm4:pb[16px]">
+                Already have an account?
+              </h5>
+              <button className="text-[16px] leading-[24px] font-normal border border-[#94c99d] text-[#94c99d] h-[62px] px-[90px] bg-[#fff] rounded-[50px] mw-13:px-[60px] mw-13:h-[56px] mw-md:text-[14px] mw-sm4:text-[14px] mw-sm4:h-[35px] mw-sm4:px-[32px]">
+                Login
+              </button>
+            </div>
+          </div>
+          {/* <div className="payment-section">
             <div>
               <div className="payment-method">Pay with: E-Transfer</div>
               <div className="free-text">Free first exchange</div>
@@ -652,11 +749,11 @@ const Calculator = ({ setCartData = () => {} }) => {
               <div>Available for pickup</div>
               <div className="font-medium">Today</div>
             </div>
-          </div>
+          </div> */}
 
-          <button className="submit-button" onClick={() => toggleModal()}>
+          {/* <button className="submit-button" onClick={() => toggleModal()}>
             Lock in rate & order
-          </button>
+          </button> */}
         </div>
       )}
       <OrderFormModal

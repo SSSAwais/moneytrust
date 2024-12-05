@@ -4,3 +4,31 @@
 .main_image_wrapper {
   display: flex !important;
 }
+.slick-dots {
+  bottom: -25px; /* Adjust position if necessary */
+}
+
+.slick-dots li {
+  width: 36px; /* Width of each dot */
+  height: 6px; /* Height of each dot */
+}
+
+.slick-dots li button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: gray; /* Default color for inactive dots */
+  border-radius: 3px; /* Optional: Rounded edges */
+  padding: 0;
+}
+
+.slick-dots li.slick-active button {
+  background-color: #015180; /* Color for the active dot */
+}
+.slick-dots li.slick-active button:before,
+.slick-dots li button:before {
+  display: none !important;
+}
+.slick-dots {
+  bottom: -30px;
+}

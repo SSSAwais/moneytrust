@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 // import HeroCard from "@/components/Hero/HeroCard";
 import { Images } from "@/utils/Images";
 import Image from "next/image";
+import Link from "next/link";
 import { BiPlusMedical } from "react-icons/bi";
 import { GoArrowRight } from "react-icons/go";
 import { PiStarThin } from "react-icons/pi";
@@ -13,12 +14,12 @@ export default function Home() {
     {
       img: Images.progress.src,
       heading: "Get The Exchange Rate",
-      desc: "Call our office or simply walk-in to know the latest exchange rate.",
+      desc: "Find the best exchange rates online, call us, or visit our office. We guarantee transparent transactions with no hidden service fees.",
     },
     {
       img: Images.chart.src,
       heading: "Confirm The Transfer",
-      desc: "Confirm the exchange rate and the service fee and pay the equivalent money to our office cashier. Also provide the destinaion account/contact information.",
+      desc: "Securely lock in your exchange rate. For cash payments, walk into our office. For E-Transfers, give us a call or visit us in person. Share the recipient’s details, and we’ll take care of the rest",
     },
     {
       img: Images.success.src,
@@ -89,28 +90,28 @@ export default function Home() {
 
   const TestimonialArray = [
     {
-      user: { img: Images.user.src, name: "Jonny Smith", job: "Banker" },
-      desc: "“The bank that has secured quality and dictated taste in the banking sector, I wan to thanks to a brilliant rebranding and unique working methods. From the very first minute Ceve bank made us take a fresh and modern look.",
+      user: { img: Images.user.src, name: "Joaquin", job: "Banker" },
+      desc: "Just went in earlier at this branch. I really had a good deal in exchanging my US dollars to Canadian dollars. I definitely recommend to go here if you want to buy or sell USD. I believe they also have a great deal with buying/selling Euros as well. Thanks to the nice lady for accommodating my request to choose specific denominations that I want in CAD.",
     },
     {
-      user: { img: Images.user.src, name: "Victor James", job: "CEO of Solit" },
-      desc: "“The best innovative and digital bank ,with the best service and staff.",
+      user: { img: Images.user.src, name: "Deli raesi", job: "CEO of Solit" },
+      desc: "One of money trust's standout features is its consistently low trading fees, which remain among the most competitive in the industry. This makes it an attractive choice for traders looking to minimize costs without compromising on quality or service",
     },
     {
       user: {
         img: Images.user.src,
-        name: "Jonathon Ronan",
+        name: "Dasha Zukher",
         job: "Businessman",
       },
-      desc: "“Excellent service, perfect and friendly staff in branch. I am very thankful to the Credit Services Depart ment, my loan was granted without any hassle - easy, fast and with quality.",
+      desc: "Great customer service from the staff, everyone I’ve ever dealt with was very friendly and pleasant to deal with. The money exchange rate was very good as well compared to other companies I’ve used before. I highly recommend Money Trust’s services if you are looking for an overall great experience. 10/10",
     },
     {
       user: {
         img: Images.user.src,
-        name: "Johny Lorence",
+        name: "koray Yilma",
         job: "Enterpreuner",
       },
-      desc: "“We can confidently state that Ceve bank is one of our most innovative and brave partners.",
+      desc: "It's a great experience, while other branches just agreed to send money, I got my job done here in less than 2 minutes, AWESOME.",
     },
   ];
 
@@ -118,14 +119,14 @@ export default function Home() {
     <main className="pb-10">
       <Hero />
 
-      <section className="md:hidden px-5 md:px-0 pb-5 -mt-8 z-10 block relative">
+      <section className="hidden px-5 md:px-0 pb-5 -mt-8 z-10 block relative">
         {/* <HeroCard /> */}
         <Calculator />
       </section>
 
       {/* popular countries section start here */}
 
-      <section className="max-w-[1400px] px-4 sm:px-6 lg:px-8 flex pt[65px] lg:flex-row flex-col gap-y-3  mx-auto justify-between items-end mt-[65px]    mw-13:px-[25px] mw-xl:w-[100%] mw-lg:items-start mw-md:mt-[50px] mw-sm4:mt-[25px]">
+      <section className=" max-w-[1400px] px-4 sm:px-6 lg:px-8 flex pt[65px] lg:flex-row flex-col gap-y-3  mx-auto justify-between items-end mt-[-150px] relative z-1    mw-13:px-[25px] mw-xl:w-[100%] mw-lg:items-start mw-md:mt-[-100px] mw-sm4:mt-[-50px]">
         <div className=" w-[40%] mx-14:w-[35%] mw-lg:w-[100%] mw-lg:mb-[20px] mw-sm5:mb-[12px]">
           <h1 className="font-bold  text-[38px] mb-[37px] mw-xl:text-[32px] mw-14:mb-[30px] mw-sm4:text-[26px] mw-sm5:text-[18px] mw-sm5:leading-[22px] text-[#000] mw-sm4:mb-[20px] mw-sm5:mb-[10px] ">
             Popular Countries Our <br /> Customers Send Money
@@ -144,7 +145,7 @@ export default function Home() {
 
       {/* money transfer section start here */}
 
-      <section className="max-w-[1400px] px-4 sm:px-6 lg:px-8 flex flex-col items-center mx-auto gap-y-3 mt-[160px] mw-md:mt-[60px] mw-sm4:mt-[30px]">
+      <section className="max-w-[1400px] px-4 sm:px-6 lg:px-8 flex flex-col items-center mx-auto gap-y-3 mt-[160px] mw-md:mt-[60px] mw-sm4:mt-[60px] ">
         <h1 className="text-[38px] text-center font-bold  font-poppinss text-[#000] mw-xl:text-[32px] mw-sm4:text-[26px] mw-sm5:text-[18px] mw-sm5:hidden">
           How Does Money Transfer Work?
         </h1>
@@ -195,11 +196,11 @@ export default function Home() {
                   height={256}
                   width={256}
                 />
-                <h1 className="md:text-2xl text-xl font-bold  mt-5 flex items-center justify-center font-poppinss text-[#000] mw-11:text-[22px] mw-sm5:text-[14px] ">
+                <h1 className="md:text-2xl text-xl font-medium mt-5 flex items-center justify-center font-poppinss text-[#000] mw-11:text-[22px] mw-sm5:text-[14px] ">
                   {item?.heading}
                 </h1>
               </div>
-              <p className="max-w-xs text-center mt-4 font-poppinss text-[#000] text-[18px] mw-11:text-[16px] mw-sm5:text-[12px] mw-sm5:px-[33px]">
+              <p className="max-w-xs leading-[26px] text-center mt-[30px] font-poppinss text-[#000] text-[18px] mw-11:text-[16px] mw-sm5:text-[12px] mw-sm5:px-[33px] mw-sm4:mt-[12px]">
                 {item?.desc}
               </p>
             </div>
@@ -216,22 +217,27 @@ export default function Home() {
 
       {/* why choose us section starts here */}
 
-      <section className="max-w-[1400px] px-4 sm:px-6 mx-auto flex pb-3 lg:flex-row flex-col md:gap-5 mt-[165px] mw-md:mt-[50px] mw-sm4:mt-[25px]">
+      <section className="max-w-[1400px] px-4 sm:px-6 mx-auto flex pb-3 lg:flex-row flex-col md:gap-5 mt-[124px] mw-md:mt-[50px] mw-sm4:mt-[25px]">
         <img src={Images.chose.src} className=" rounded-lg lg:w-1/2" alt="" />
         <div className="lg:pl-28 mw-12:pl-[50px] mw-lg:pl-[0px]">
-          <h1 className="text-[38px] text-[#091133] font-bold flex items-center leading-[48px] mw-xl:text-[32px] mw-sm4:text-[26px] mw-sm5:text-[18px] mw-sm5:leading-[22px] mw-md:pt-[20px]">
+          <h1 className="text-[38px] text-[#015180] font-bold flex items-center leading-[48px] mw-xl:text-[32px] mw-sm4:text-[26px] mw-sm5:text-[18px] mw-sm5:leading-[22px] mw-md:pt-[20px]">
             Why Choose Us?
           </h1>
-          <p className="text-[18px] pt-4 text-[#000] leading-[26px] font-normal mw-11:text-[16px] mw-11:leading-[22px] mw-md:text-[14px] mw-md:leading-[20px] mw-sm4:text-[12px] ">
-            {
-              "When it comes to your currency exchange needs in North York, Toronto, look no further than us. We understand the value of accurate and speedy transactions at our exchange office, and our committed team is always available to help you with a degree of responsiveness that guarantees your peace of mind. Select us for your currency exchange needs, and discover why we're the go-to option in North York—our combination of security, dependability, and quickness."
-            }
+          <p className="text-[18px] pt-[26px] text-[#000] leading-[26px] font-normal mw-11:text-[16px] mw-11:leading-[22px] mw-md:text-[14px] mw-md:leading-[20px] mw-sm4:text-[12px] ">
+            When it comes to your currency exchange needs in North York,
+            Toronto, look no further than us. We understand the value of
+            accurate and speedy transactions at our exchange office, and our
+            committed team is always available to help you with a degree of
+            responsiveness that guarantees your peace of mind. Select us for
+            your currency exchange needs, and discover why we're the go-to
+            option in North York—our combination of security, dependability, and
+            quickness.
           </p>
-          <section className="md:mt-8 grid grid-cols-1 mt-2 md:grid-cols-2 gap-3">
+          <section className=" grid grid-cols-1 mt-[72px] md:grid-cols-2 gap-3 mw-sm4:mt-[28px]">
             {chooseArray.map((item, i) => (
-              <div key={i} className="flex items-start gap-2">
+              <div key={i} className="flex items-start mb-[12px]">
                 <img src={Images.checkGreen.src} className="mt-1" alt="" />
-                <div>
+                <div className="ml-[12px]">
                   <h1 className="font-medium text-[#091133] text-[16px] leading-[26px] mb-[6px] mw-sm4:text-[14px]">
                     {item.title}
                   </h1>
@@ -310,30 +316,30 @@ export default function Home() {
 
       {/* international students starts here */}
 
-      <section className="max-w-[1400px] px-4 sm:px-6 mx-auto  md:flex lg:flex-row flex-col gap-5 mt-[134px] mw-md:mt-[50px] mw-sm4:mt-[25px]">
+      <section className="max-w-[1400px] items-center px-4 sm:px-6 mx-auto  md:flex lg:flex-row flex-col gap-5 mt-[134px] mw-md:mt-[50px] mw-sm4:mt-[25px]">
         <div className="flex-1 mw-md:pb-[50px] mw-sm4:pb-[25px]">
-          <strong className="font-bold text-[16px] pb-[14px] font-Figtree leading-[16px] text-[#000] mw-md:hidden">
+          <strong className="font-bold text-[16px] pb-[14px] font-Figtree leading-[16px] text-[#7CBD87] mw-md:hidden">
             Best plan
           </strong>
           <h1 className="text-[38px] leading-[52px] font-bold text-[#0d0e10] mw-xl:text-[32px] mw-sm4:text-[26px] mw-sm5:text-[18px] mw-sm5:leading-[22px] mw-md:leading-[40px]">
             International Students <br /> Are Welcome
           </h1>
-          <div className="flex flex-col gap-4 pt-[60px] mw-md:pt-[30px]">
+          <div className="flex flex-col  pt-[54px] mw-md:pt-[30px]">
             {planArray.map((item, index) => (
               <div
                 key={index}
-                className="flex gap-3 items-start mb-[40px] mw-md:mb-[20px]"
+                className="flex  items-start mb-[40px] mw-md:mb-[20px]"
               >
                 <img
                   src={item.img}
                   alt="ico"
                   className="mw-sm4:w-[34px] mw-sm4:h=[34px]"
                 />
-                <div>
-                  <h1 className="font-bold text-[#0D0E10] text-[20px] leading-[20px] pb-[13px] font-Figtree mw-md:text-[18px]">
+                <div className="ml-[16px]">
+                  <h1 className="font-bold text-[#0D0E10] text-[20px] leading-[20px] pb-[13px] font-Figtree mw-md:text-[18px] mw-sm4:text-[16px] mw-sm4:pb-[8px]">
                     {item.title}
                   </h1>
-                  <p className="text-[#676879] font-normal text-[15px] font-Figtree leading-[20px] mw-md:text-[14px] mw-sm4:text-[12px] mw-sm4:leading-[16px]">
+                  <p className="text-[#676879] font-normal text-[15px] font-Figtree leading-[20px] mw-md:text-[14px] mw-sm4:text-[12px] mw-sm4:leading-[16px] pr-[90px] mw-md:pr-[50px] mw-sm4:pr-[0px]">
                     {item.desc}
                   </p>
                 </div>
@@ -350,32 +356,43 @@ export default function Home() {
       {/* international students ends here */}
 
       {/* hightlights of our services started here*/}
-      <section className="bg-[#015180] pt-[117px] pb-[110px] mt-[137px] mw-md:mt-[50px] mw-md:pt-[50px] mw-md:pb-[50px] mw-sm4:py-[25px]">
-        <div className="max-w-[1400px] px-4 sm:px-6 mx-auto  text-white gap-4 flex flex-row mw-lg:flex-col">
-          <div className="w-[40%] mw-12:w-[48%] mw-lg:w-[100%]">
+      <section className="bg-[#015180] pt-[108px] pb-[108px] mt-[137px] mw-md:mt-[50px] mw-md:pt-[50px] mw-md:pb-[50px] mw-sm4:py-[25px]">
+        <div className="max-w-[1400px] px-4 sm:px-6 mx-auto  items-center text-white gap-4 flex flex-row mw-lg:flex-col">
+          <div className="w-[50%] mw-12:w-[48%] mw-lg:w-[100%]">
             <div className="max-w-[593px] w-[100%] mx-auto">
               <Image
-                src={"/Images/girl.png"}
+                src={"/Images/communication.png"}
                 width={593}
                 height={883}
                 alt=""
-                className="md:block hidden w-[593px] h-[850px] mw-xl:h-[770px]"
+                className="md:block  w-[593px] h-auto "
               />
             </div>
           </div>
 
-          <div className="w-[60%] mw-12:w-[62%] mw-lg:w-[100%]">
-            <h1 className="px-5 md:px-0 text-[38px] font-bold pb-[22px] leading-[30px] text-white mw-xl:text-[32px] mw-sm4:text-[26px] mw-sm5:text-[18px] mw-md:pl-[0px]">
+          <div className="w-[50%] mw-12:w-[62%] mw-lg:w-[100%]">
+            <h1 className="px-5 md:px-0 text-[38px] font-bold pb-[24px] leading-[30px] text-white mw-xl:text-[32px] mw-sm4:text-[26px] mw-sm5:text-[18px] mw-md:pl-[0px] mw-sm4:pb-[20px] mw-md:pt-[50px] mw-sm4:pt-[25px] ">
               Highlights Of Our Services
             </h1>
-            <p className="px-5 md:px-0 text-[17px] font-Montserrat leading-[20px] pr-[80px] mw-md:px-[0px]">
-              This summer camp is designed for international students aged 10-18
-              with an interest in AI and entrepreneurship. Participants should
-              be eager to engage in hands-on activities in Singapore and explore
-              how AI applies to business innovation.
+            <p className="px-5 md:px-0 text-[18px] font-normal font-poppinss leading-[35px] pr-[80px] mw-md:px-[0px] mw-sm4:text-[17px] mw-sm4:leading-[20px]">
+              Our tailored services cater to your financial needs, offering
+              innovative solutions for secure and efficient currency exchanges.
+              Whether you're sending money abroad or managing international
+              transactions, we ensure a smooth process that prioritizes your
+              convenience and peace of mind. To protect our clients' financial
+              transactions, we employ advanced security measures at every stage
+              of the currency exchange process. Our state-of-the-art encryption
+              technology ensures your data remains private and secure,
+              safeguarding it from unauthorized access. Additionally, our highly
+              trained staff adheres to strict security guidelines to guarantee
+              the integrity of every transaction. <br /> We are committed to
+              maintaining the highest security standards and providing a
+              seamless, secure environment for all currency exchange services at
+              our Toronto and North Vancouver locations. Your trust and
+              confidence remain our top priorities.
             </p>
             <div className="pt-[24px] ">
-              <div className="flex px-5 md:px-0">
+              {/* <div className="flex px-5 md:px-0">
                 <strong className="font-poppinss border border-b-0 border-[#B8B8B8] font-semibold md:text-2xl text-[23px] md:h-[80px] h-[50px] flex justify-center items-center flex-1 px-1 whitespace-nowrap mw-xl:h-[60px] mw-xl:text-[20px] mw-9:text-[18px] mw-md:text-[16px] mw-sm4:text-[14px] mw-sm5:text-[12px]">
                   Security
                 </strong>
@@ -385,22 +402,22 @@ export default function Home() {
                 <strong className="font-poppinss md:text-2xl text-[23px] font-semibold  md:h-[80px] h-[50px] flex justify-center items-center flex-1 px-1 whitespace-nowrap mw-xl:h-[60px] mw-xl:text-[20px] mw-9:text-[18px] mw-md:text-[16px] mw-sm4:text-[14px] mw-sm5:text-[12px]">
                   Speed
                 </strong>
-              </div>
-              <img
+              </div> */}
+              {/* <img
                 src={"/Images/mobile_imag.png"}
                 alt=""
                 className="md:hidden block max-h-[200px] w-full object-cover object-center h-full"
-              />
+              /> */}
               <div
-                className="pt-[34px] pl-[28px] pr-[45px] md:border border-[#B8B8B8] pb-[65px] mw-13:pb-[12px] mw-xl:p-[20px] 
+                className="pt-[34px]  pr-[45px]  mw-xl:p-[20px] 
               mw-md:px-[20px] mw-sm4:px-[0px]  "
               >
-                <p className="leading-9 font-poppinss text-[18px] leading-[34px] font-normal pb-[40px] mw-12:text-[17px] mw-12:leading-[33px] mw-11:text-[16px] mw-md:text-[14px] mw-sm4:text-[12px] mw-sm4:leading-[22px] mw-sm4:pb-[16px] ">
+                {/* <p className="leading-9 font-poppinss text-[18px] leading-[34px] font-normal pb-[40px] mw-12:text-[17px] mw-12:leading-[33px] mw-11:text-[16px] mw-md:text-[14px] mw-sm4:text-[12px] mw-sm4:leading-[22px] mw-sm4:pb-[16px] ">
                   {
                     "To protect our clients' financial transactions, we use strong and advanced security measures at every stage of the currency conversion procedure. Our cutting-edge solutions shield critical data using cutting-edge encryption technology, guaranteeing that it stays private and unreadable by other parties. Furthermore, our qualified staff is educated to follow stringent security guidelines, ensuring the integrity of every transaction. Our steadfast focus to upholding the highest security standards highlights our commitment to providing a safe and secure environment for all currency exchange transactions at our Toronto and North Vancouver branches. We place a high priority on the trust and confidence of our clients."
                   }
-                </p>
-                <div className="flex flex-col gap-4 pb-10 items-start mw-md:pb-[0px]">
+                </p> */}
+                <div className="flex flex-col gap-4 items-start mw-md:pb-[0px]">
                   <div className="flex items-center gap-2">
                     <img src={Images.checkGreen.src} className="h-5" alt="" />
                     <span className=" text-[14px] leading-[27px] font-normal mw-sm4:text-[12px]">
@@ -474,22 +491,25 @@ export default function Home() {
                       </div>
                     ))}
                 </div>
-                <p className="pt-[29px] text-[#070F38] text-[18px] leading-[32px] pr-[70px] mw-md:text-[16px] mw-md:leading-[28px] mw-sm4:text-[14px] mw-sm4:leading-[26px] mw-sm5:text-[12px] mw-sm5:leading-[24px] mw-sm4:pr-[0px] ">
+                <p className="pt-[29px] text-[#070F38] text-[18px] leading-[32px] pr-[10px] mw-md:text-[16px] mw-md:leading-[28px] mw-sm4:text-[14px] mw-sm4:leading-[26px] mw-sm5:text-[12px] mw-sm5:leading-[24px] mw-sm4:pr-[0px] ">
                   {item.desc}
                 </p>
-                <div className="pt-[30px] flex gap-3 pb-[40px] mw-sm4:pt-[10px] mw-sm4:pb-[10px]">
+                <div className="pt-[30px] flex gap-3 pb-[40px] mw-sm4:pt-[10px] mw-sm4:pb-[10px] items-center">
                   <img
                     className="w-[50px] h-[50px]"
-                    src={item.user.img}
+                    src={"/Images/testimonial.png"}
                     alt=""
                   />
                   <div>
-                    <h1 className="font-medium text-[18px] leading-[22px] text-[#015180]">
+                    <Link
+                      href="#"
+                      className="font-medium text-[18px] leading-[22px] text-[#015180] underline "
+                    >
                       {item.user.name}
-                    </h1>
-                    <h1 className="font-medium text-[14px] leading-[21px] text-[#707070]">
+                    </Link>
+                    {/* <h1 className="font-medium text-[14px] leading-[21px] text-[#707070]">
                       {item.user.job}
-                    </h1>
+                    </h1> */}
                   </div>
                 </div>
               </div>
@@ -499,7 +519,7 @@ export default function Home() {
       </section>
       {/* feedback section ends here */}
 
-      <section className="bg-[#F4F4F4] p-5 md:p-10 ">
+      {/* <section className="bg-[#F4F4F4] p-5 md:p-10 ">
         <div className="container md:px-20 mx-auto ">
           <h1 className="text-center font-bold text-xl md:text-4xl pt-5">
             We Are Trusted By
@@ -520,7 +540,7 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }

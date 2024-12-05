@@ -71,3 +71,19 @@ textarea {
   font-weight: 400;
   font-style: normal;
 }
+.css-13cymwt-control,
+.css-1u9des2-indicatorSeparator {
+  border: none !important;
+}
+
+.css-1u9des2-indicatorSeparator {
+  background-color: none !important;
+  width: 0px !important;
+}
+.css-19bb58m {
+  width: 80px !important;
+}
+.css-1xc3v61-indicatorContainer {
+  padding: 0px !important;
+  color: #000 !important;
+}
