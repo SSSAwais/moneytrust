@@ -62,11 +62,11 @@ const Hero = () => {
           </p>
           <div>
             <div className="flex space-x-4 mt-[34px] mw-sm4:mt-[16px]">
-              <button className="bg-blue1 text-white flex justify-center font-medium items-center md:gap-3 gap-2 whitespace-nowrap text-[16px] md:text-[16px] px-[30px] py-[20px]  rounded-full mw-md:py-[16px] mw-md:text-[14px] mw-sm4:text-[12px] mw-sm4:py-[9px] mw-sm4:px-[11px]">
+              <button className="bg-blue1 text-white flex justify-center font-medium items-center md:gap-3 gap-2 whitespace-nowrap text-[16px] md:text-[16px] px-[30px] py-[20px]  rounded-full mw-md:py-[16px] mw-md:text-[14px] mw-sm4:text-[12px] mw-sm4:py-[9px] mw-sm4:px-[11px] mw-sm4:h-[38px]">
                 Transfer Money
                 <img src={Images.plus.src} className="h-5" alt="ico" />
               </button>
-              <button className="border flex justify-center items-center md:gap-3 gap-2 whitespace-nowrap text-[16px] md:text-[16px] border-white text-white px-[30px] py-[20px] rounded-full font-medium mw-md:py-[16px] mw-md:text-[14px] mw-sm4:text-[12px] mw-sm4:py-[9px] mw-sm4:px-[11px]">
+              <button className="border flex justify-center items-center md:gap-3 gap-2 whitespace-nowrap text-[16px] md:text-[16px] border-white text-white px-[30px] py-[20px] rounded-full font-medium mw-md:py-[16px] mw-md:text-[14px] mw-sm4:text-[12px] mw-sm4:py-[9px] mw-sm4:px-[11px] mw-sm4:h-[38px]">
                 See How It Works
                 <img src={Images.work.src} className="h-5" alt="ico" />
               </button>

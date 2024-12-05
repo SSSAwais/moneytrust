@@ -94,7 +94,11 @@ export default function Home() {
       desc: "Just went in earlier at this branch. I really had a good deal in exchanging my US dollars to Canadian dollars. I definitely recommend to go here if you want to buy or sell USD. I believe they also have a great deal with buying/selling Euros as well. Thanks to the nice lady for accommodating my request to choose specific denominations that I want in CAD.",
     },
     {
-      user: { img: "/Images/testimonial.png", name: "Deli raesi", job: "CEO of Solit" },
+      user: {
+        img: "/Images/testimonial.png",
+        name: "Deli raesi",
+        job: "CEO of Solit",
+      },
       desc: "One of money trust's standout features is its consistently low trading fees, which remain among the most competitive in the industry. This makes it an attractive choice for traders looking to minimize costs without compromising on quality or service",
     },
     {
@@ -107,7 +111,7 @@ export default function Home() {
     },
     {
       user: {
-        img: '/Images/women.svg',
+        img: "/Images/women.svg",
         name: "koray Yilma",
         job: "Enterpreuner",
       },
@@ -131,8 +135,11 @@ export default function Home() {
           <h1 className="font-bold  text-[38px] mb-[37px] mw-xl:text-[32px] mw-14:mb-[30px] mw-sm4:text-[26px] mw-sm5:text-[18px] mw-sm5:leading-[22px] text-[#000] mw-sm4:mb-[20px] mw-sm5:mb-[10px] ">
             Popular Countries Our <br /> Customers Send Money
           </h1>
-          <p className="text-[24px] font-normal leading-[32px] text-[#1f1e21] opacity-80 pr-[90px] mw-14:text-[20px] mw-sm4:text-[16px] mw-sm5:text-[12px] mw-sm5:leading-[20px] mw-sm4:text-[#000] ">
-          Our customers trust us to transfer money quickly and securely to their loved ones and businesses in top destinations worldwide, including Hong Kong, Canada, China, and the USA. No matter where you're sending money, we’ve got you covered
+          <p className="text-[24px] font-normal leading-[32px] text-[#1f1e21] opacity-80 pr-[90px] mw-14:text-[20px] mw-sm4:text-[16px] mw-sm5:text-[12px] mw-sm5:leading-[20px] mw-sm4:text-[#000]  mw-sm4:pr-[0px]">
+            Our customers trust us to transfer money quickly and securely to
+            their loved ones and businesses in top destinations worldwide,
+            including Hong Kong, Canada, China, and the USA. No matter where
+            you're sending money, we’ve got you covered
           </p>
         </div>
         <div className="w-[60%] mx-14:w-[65%] mw-lg:w-[100%]">
@@ -153,7 +160,8 @@ export default function Home() {
         </h1>
         <div className="flex justify-center">
           <p className="md:text-lg mt-2 text-center max-w-[600px] font-poppinss font-normal text-[#000]  mw-md:text-[16px] mw-sm5:text-[12px] mw-sm5:px-[34px]">
-          Transferring money with us is simple and secure.Start your transfer now and experience the difference!
+            Transferring money with us is simple and secure.Start your transfer
+            now and experience the difference!
           </p>
         </div>
 
@@ -198,7 +206,7 @@ export default function Home() {
                   {item?.heading}
                 </h1>
               </div>
-              <p className="max-w-xs leading-[26px] text-center mt-[30px] font-poppinss text-[#000] text-[18px] mw-11:text-[16px] mw-sm5:text-[12px] mw-sm5:px-[33px] mw-sm4:mt-[12px]">
+              <p className="max-w-xs leading-[26px] text-center mt-[30px] font-poppinss text-[#000] text-[18px] mw-11:text-[16px] mw-sm5:text-[12px] mw-sm5:px-[33px] mw-sm4:mt-[12px] mw-sm4:leading-[16px]">
                 {item?.desc}
               </p>
             </div>
@@ -222,7 +230,13 @@ export default function Home() {
             Why Choose Us?
           </h1>
           <p className="text-[18px] pt-[26px] text-[#000] leading-[26px] font-normal mw-11:text-[16px] mw-11:leading-[22px] mw-md:text-[14px] mw-md:leading-[20px] mw-sm4:text-[12px] ">
-          Conveniently located in the heart of downtown North York, we offer fast, reliable, and accurate currency exchange services with no hidden fees. Our experienced team ensures seamless transactions, providing peace of mind for all your money exchange needs. Select us for your currency exchange needs, and discover why we're the go-to option in North York—our combination of security, dependability, and quickness.
+            Conveniently located in the heart of downtown North York, we offer
+            fast, reliable, and accurate currency exchange services with no
+            hidden fees. Our experienced team ensures seamless transactions,
+            providing peace of mind for all your money exchange needs. Select us
+            for your currency exchange needs, and discover why we're the go-to
+            option in North York—our combination of security, dependability, and
+            quickness.
           </p>
           <section className=" grid grid-cols-1 mt-[72px] md:grid-cols-2 gap-3 mw-sm4:mt-[28px]">
             {chooseArray.map((item, i) => (
@@ -265,7 +279,8 @@ export default function Home() {
             </h1>
             <div className="flex justify-end flex-col items-end gap-2 mw-md:justify-start mw-md:items-start">
               <p className="sm:text-end text-start max-w-[500px] text-[#707070] mw-xl:text-[14px] mw-md:text-start ">
-               Effortlessly send, receive, and manage your money transfers with confidence using Money Trust's reliable and secure services.
+                Effortlessly send, receive, and manage your money transfers with
+                confidence using Money Trust's reliable and secure services.
               </p>
               <button className="bg-[#94C99D] text-white hidden md:flex justify-center items-center md:gap-3 gap-2 whitespace-nowrap text-[16px] font-medium  md:px-6 px-3 py-3 rounded-full mt-[23px] mw-xl:text-[14px] mw-xl:py-[10px] mw-xl:px-[20px] ">
                 View More
@@ -361,7 +376,7 @@ export default function Home() {
           </div>
 
           <div className="w-[50%] mw-12:w-[62%] mw-lg:w-[100%]">
-            <h1 className="px-5 md:px-0 text-[38px] uppercase font-bold pb-[24px] leading-[30px] text-white mw-xl:text-[32px] mw-sm4:text-[26px] mw-sm5:text-[18px] mw-md:pl-[0px] mw-sm4:pb-[20px] mw-md:pt-[50px] mw-sm4:pt-[25px] ">
+            <h1 className="px-5 md:px-0 text-[38px] uppercase font-bold pb-[24px] leading-[30px] text-white mw-xl:text-[32px] mw-sm4:text-[26px] mw-sm5:text-[18px] mw-md:pl-[0px] mw-sm4:pb-[20px] mw-lg:pt-[50px] mw-sm4:pt-[25px] ">
               Highlights Of Our Services
             </h1>
             <p className="px-5 md:px-0 text-[18px] font-normal font-poppinss leading-[35px] pr-[80px] mw-md:px-[0px] mw-sm4:text-[12px] mw-sm4:leading-[20px]">

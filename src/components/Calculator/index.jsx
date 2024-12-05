@@ -416,7 +416,7 @@ const Calculator = ({ setCartData = () => {} }) => {
     <div className="bg-white border border-gray-400 shadow-lg w-full max-w-[550px] w-full rounded-[16px]  overflow-hidden  mw-sm4:rounded-none ">
       <div className="flex mx-auto bg-gray-200 rounded-t-[16px] mw-sm4:rounded-none">
         <div
-          className={`flex-1 flex justify-center items-center py-5 px-5 md:px-0 text-sm whitespace-nowrap cursor-pointer  md:text-lg font-bold  mw-sm4:text-[12px] ${
+          className={`flex-1 flex justify-center items-center py-5 px-5 md:px-0 text-sm whitespace-nowrap cursor-pointer  md:text-lg font-bold  mw-sm4:text-[12px] mw-sm4:py-[10px] ${
             activeTab === 1
               ? "bg-[#015180] text-[24px] text-white  font-normal font-roboto mw-sm4:text-[12px]"
               : ""
@@ -427,17 +427,17 @@ const Calculator = ({ setCartData = () => {} }) => {
             setCart([]);
           }}
         >
-          Currency Exchange
+          Account to Account
         </div>
         <div
-          className={`flex-1 flex justify-center items-center py-5 px-5 md:px-0 text-sm whitespace-nowrap cursor-pointer  md:text-lg font-bold mw-sm4:text-[12px] ${
+          className={`flex-1 flex justify-center items-center py-5 px-5 md:px-0 text-sm whitespace-nowrap cursor-pointer  md:text-lg font-bold mw-sm4:text-[12px] mw-sm4:py-[10px] ${
             activeTab === 2
               ? "bg-[#015180] text-white text-[24px]  font-normal font-roboto mw-sm4:text-[12px]"
               : ""
           }`}
           onClick={() => setActiveTab(2)}
         >
-          Buy Gold
+          By Cash
         </div>
       </div>
       {activeTab === 2 ? (
@@ -698,18 +698,19 @@ const Calculator = ({ setCartData = () => {} }) => {
             </p>
           </div>
           <div className="flex">
-            <div className="flex">
+            <div className="flex items-center">
               <Image
                 src={"Images/yellowtick.svg"}
                 alt=""
                 width={20}
                 height={20}
+                className="mw-sm4:w-[15px] mw-sm4:h-[15px]"
               />
               <h4 className="font-normal text-[14px] leading-[27px] text-[#5b5b5b] ml-[15px] mw-sm4:text-[12px] mw-sm4:ml-[2px]">
                 No Hidden fees
               </h4>
             </div>
-            <div className="flex ml-[18px]">
+            <div className="flex ml-[18px] items-center">
               <Image
                 src={"Images/yellowtick.svg"}
                 alt=""
@@ -731,7 +732,7 @@ const Calculator = ({ setCartData = () => {} }) => {
                 Get Started
               </button>
             </div>
-            <div className="ml-[17px]">
+            <div className="ml-[17px] mw-sm4:ml-[10px]">
               <h5 className="font-roboto text-[16px] leading-[18px] text-[#5b5b5b] pb-[29px] mw-md:text-[14px] mw-sm4:text-[12px] mw-md:pb-[20px] mw-sm4:pb[16px]">
                 Already have an account?
               </h5>
