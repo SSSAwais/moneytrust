@@ -41,26 +41,26 @@ const Faq = () => {
 
   return (
     <div className="max-w-[1074px]  sm:px-6 mx-auto  py-[65px] px-4 mw-lg:py-[50px] mw-sm4:py-[25px] ">
-      <h2 className="text-[40px] leading-[48px] text-[#000] font-bold text-center mb-[49px] mw-xl:text-[38px] mw-lg:text-[32px] mw-md:text-[26px] mw-sm4:text-[18px] mw-sm4:leading-[22px] mw-sm4:mb-[25px]">
+      <h2 className="text-[40px] leading-[48px] text-[#000] font-extrabold text-center mb-[49px] mw-xl:text-[38px] mw-lg:text-[32px] mw-md:text-[26px] mw-sm4:text-[18px] mw-sm4:leading-[22px] mw-sm4:mb-[25px] mw-lg:mb-[40px]">
         Frequently Asked Questions
       </h2>
-      <div className="space-y-4">
+      <div className="">
         {faqData.map((item, index) => (
           <div
             key={index}
-            className={`border rounded-lg py-[35px] px-[31px] !bg-blue-50 mw-sm4:py-[9px] mw-sm4:px-[10px] ${
-              activeIndex === index ? "bg-blue-50" : ""
+            className={` rounded-lg py-[35px] px-[52px] bg-[#F1FAFF] mb-[49px] mw-sm4:py-[9px] mw-sm4:px-[10px] mw-md:mb-[30px] mw-sm4:mb-[22px] ${
+              activeIndex === index ? "bg-[#F1FAFF]" : ""
             } cursor-pointer`}
             onClick={() => handleToggle(index)}
           >
             <div className="flex justify-between items-center">
-              <h3 className="text-[30px] leading-[36px] text-[#000] font-semibold mw-lg:text-[26px] mw-lg:leading-[32px] mw-md:text-[18px]  mw-md:leading-[24px] mw-sm4:text-[14px] mw-sm4:leading-[16px] ">
+              <h3 className="text-[30px] leading-[36px] text-[#000] font-semibold mw-lg:text-[26px] mw-lg:leading-[32px] mw-md:text-[18px]  mw-md:leading-[24px] mw-sm4:text-[14px] mw-sm4:leading-[16px] mw-sm5:text-[12px]">
                 {item.question}
               </h3>
               {activeIndex === index ? (
-                <IoArrowUpCircleOutline className="text-gray-600 text-2xl" />
+                <IoArrowUpCircleOutline className="text-[#0C0B0B] text-[40px] mw-sm4:text-[21px]" />
               ) : (
-                <IoArrowDownCircleOutline className="text-gray-600 text-2xl" />
+                <IoArrowDownCircleOutline className="text-[#0C0B0B] text-[40px] mw-sm4:text-[21px]" />
               )}
             </div>
             {activeIndex === index && (

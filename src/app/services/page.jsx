@@ -67,15 +67,15 @@ const page = () => {
       <PagesHero page={"Services"} />
       <section className="bg-gray-50 pt-[86px] pb-[86px] mw-lg:py-[50px] mw-sm4:py-[25px]">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-[44px] text-[#0d0e10] font-semibold text-center mb-8 font-Figtree mw-xl:text-[38px] mw-lg:text-[32px] mw-md:text-[26px] mw-sm4:text-[18px] leading-[52px]">
+          <h2 className="text-[44px] text-[#0d0e10] font-semibold text-center mb-[60px] font-Figtree mw-xl:text-[38px] mw-lg:text-[32px] mw-md:text-[26px] mw-sm4:text-[18px] leading-[52px] mw-lg:mb-[50px] mw-sm4:mb-[18px]">
             Our Services At A Glance
           </h2>
 
-          <div className="grid mw-sm4:grid-cols-1 grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-8">
+          <div className="grid mw-sm4:grid-cols-1 grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-8 ">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-[7px] shadow-lg p-6 flex flex-col items-start justify-between"
+                className="bg-white rounded-[7px] shadow-lg pt-[32px] pb-[24px] px-[24px] flex flex-col items-start justify-between"
               >
                 <div className="w-[80px] h-[80px] bg-[#e7ebf7] rounded-[50px] flex items-center justify-center mw-md:w-[60px] mw-md:h-[60px]">
                   <Image
@@ -86,7 +86,7 @@ const page = () => {
                     height={39}
                   />
                 </div>
-                <h3 className="text-[20px] leading-[20px] font-Figtree text-[#0d0e10] font-bold  mt-[29px] mw-lg:text-[18px] mw-md:text-[16px]  mw-sm4:text-[14px]  mw-sm5:text-[12px] mw-sm4:mt-[15px]">
+                <h3 className="text-[20px] leading-[20px] font-Figtree text-[#0d0e10] font-bold  mt-[29px] mw-lg:text-[18px] mw-md:text-[16px]  mw-sm4:text-[14px]  mw-sm4:mt-[15px]">
                   {service.title}
                 </h3>
                 <p className="font-Figtree text-[#015180] text-[16px] leading-[28px] mt-[11px] mb-[42px] mw-md:text-[14px] mw-md:leading-[26px] mw-sm4:text-[12px] mw-sm4:leading-[16px] mw-sm4:mb-[16px]">
@@ -96,7 +96,8 @@ const page = () => {
                   href="#"
                   className="font-bold  text-[#0d0e10] text-[18px] mw-lg:text-[16px] mw-md:font-medium mw-md:text-[14px] mw-sm4:text-[12px] leading-[18px] font-Figtree flex items-center hover:text-blue-700"
                 >
-                  Learn More <AiOutlineArrowRight className="ml-2 -rotate-45" />
+                  Learn More{" "}
+                  <AiOutlineArrowRight className="ml-2 -rotate-45" size={15} />
                 </a>
               </div>
             ))}

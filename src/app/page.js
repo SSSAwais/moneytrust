@@ -339,7 +339,7 @@ export default function Home() {
                   <h1 className="font-bold text-[#0D0E10] text-[20px] leading-[20px] pb-[13px] font-Figtree mw-md:text-[18px] mw-sm4:text-[16px] mw-sm4:pb-[8px]">
                     {item.title}
                   </h1>
-                  <p className="text-[#676879] font-normal text-[15px] font-Figtree leading-[20px] mw-md:text-[14px] mw-sm4:text-[12px] mw-sm4:leading-[16px] pr-[90px] mw-md:pr-[50px] mw-sm4:pr-[0px]">
+                  <p className="text-[#676879] font-normal text-[15px] font-Figtree leading-[20px] mw-md:text-[14px] mw-sm4:leading-[16px] pr-[90px] mw-md:pr-[50px] mw-sm4:pr-[0px]">
                     {item.desc}
                   </p>
                 </div>
@@ -374,7 +374,7 @@ export default function Home() {
             <h1 className="px-5 md:px-0 text-[38px] font-bold pb-[24px] leading-[30px] text-white mw-xl:text-[32px] mw-sm4:text-[26px] mw-sm5:text-[18px] mw-md:pl-[0px] mw-sm4:pb-[20px] mw-md:pt-[50px] mw-sm4:pt-[25px] ">
               Highlights Of Our Services
             </h1>
-            <p className="px-5 md:px-0 text-[18px] font-normal font-poppinss leading-[35px] pr-[80px] mw-md:px-[0px] mw-sm4:text-[17px] mw-sm4:leading-[20px]">
+            <p className="px-5 md:px-0 text-[18px] font-normal font-poppinss leading-[35px] pr-[80px] mw-md:px-[0px] mw-sm4:text-[12px] mw-sm4:leading-[20px]">
               Our tailored services cater to your financial needs, offering
               innovative solutions for secure and efficient currency exchanges.
               Whether you're sending money abroad or managing international
@@ -463,7 +463,7 @@ export default function Home() {
               </p>
               Our client's feedback <br /> is our strength
             </h1>
-            <p className="hidden text-[14px] font-normal text-[#000] mw-md:block mw-sm4:text-[12px] mt-[20px]">
+            <p className="hidden text-[14px] font-normal text-[#000] mw-md:block mw-sm4:text-[12px] mt-[20px] mw-sm4:mt-[8px]">
               Quickly and easily send, receive and request money online with
               Money Trust.
             </p>
@@ -473,7 +473,7 @@ export default function Home() {
               <div className="inline-block h-3 w-3 bg-gray-400 rounded-[50%]"></div>
             </div>
           </div>
-          <div className="mt-[50px] flex scrollbar-hide overflow-x-auto">
+          <div className="mt-[50px] flex scrollbar-hide overflow-x-auto mw-sm4:mt-[20px]">
             {TestimonialArray.map((item, i) => (
               <div
                 key={i}

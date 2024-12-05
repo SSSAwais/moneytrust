@@ -29,10 +29,9 @@ const Footer = () => {
             </p>
             <div className="flex items-center mb-2 w-[92%]">
               <input
-                style={{ fontFamily: "Satoshi" }}
                 type="email"
                 placeholder="Enter your email"
-                className="border border-black rounded-md text-[16px] font-normal p-[12px] text-[#505050] placeholder:text-[16px] placeholder:text-[#505050] mr-2 w-[58%] focus:outline-none mw-md:text-[14px] mw-sm4:text-[12px] mw-sm4:p-[12] mw-sm4:placeholder:text-[12px]"
+                className="font-lexand border border-black rounded-[4px] text-[16px] font-normal p-[12px] text-[#505050] placeholder:text-[16px] placeholder:text-[#505050] mr-2 w-[58%] focus:outline-none mw-md:text-[14px] mw-sm4:text-[12px] mw-sm4:p-[12] mw-sm4:placeholder:text-[12px] placeholder:font-lexand"
               />
               <button className=" rounded-md text-[16px] text-[#000] py-[12px] px-[24px] border border-black font-lexand leading-[24px] mw-md:text-[14px] mw-sm4:text-[12px] mw-sm4:py-[12px] mw-sm4:px-[24px] mw-sm4:leading-[18px]">
                 Subscribe
@@ -42,11 +41,11 @@ const Footer = () => {
               className="mt-[16px] text-[12px] leading-[14px] text-[#000] pr-[176px] mw-sm4:pr-[0px]"
               style={{ fontFamily: "Satoshi" }}
             >
-              By subscribing you agree to our{" "}
+              By subscribing you agree to with our{" "}
               <a href="#" className="underline">
                 Privacy Policy
               </a>{" "}
-              and consent to receive updates from our company.
+              and provide consent to receive updates from our company.
             </p>
           </div>
           <div className="flex w-[50%] mw-lg:w-[100%]">
@@ -61,7 +60,7 @@ const Footer = () => {
                     className="hover:underline text-[14px] leading-[20px] text-[#000] font-normal "
                     style={{ fontFamily: "Satoshi" }}
                   >
-                    Link Six
+                    Link One
                   </a>
                 </li>
                 <li className="mb-[8px]">
@@ -70,7 +69,7 @@ const Footer = () => {
                     className="hover:underline text-[14px] leading-[20px] text-[#000] font-normal "
                     style={{ fontFamily: "Satoshi" }}
                   >
-                    Link Seven
+                    Link Two
                   </a>
                 </li>
                 <li className="mb-[8px]">
@@ -79,7 +78,7 @@ const Footer = () => {
                     className="hover:underline text-[14px] leading-[20px] text-[#000] font-normal"
                     style={{ fontFamily: "Satoshi" }}
                   >
-                    Link Eight
+                    Link Three
                   </a>
                 </li>
                 <li className="mb-[8px]">
@@ -88,7 +87,7 @@ const Footer = () => {
                     className="hover:underline text-[14px] leading-[20px] text-[#000] font-normal "
                     style={{ fontFamily: "Satoshi" }}
                   >
-                    Link Nine
+                    Link Four
                   </a>
                 </li>
                 <li className="mb-[8px]">
@@ -97,7 +96,7 @@ const Footer = () => {
                     className="hover:underline text-[14px] leading-[20px] text-[#000] font-normal"
                     style={{ fontFamily: "Satoshi" }}
                   >
-                    Link Ten
+                    Link Five
                   </a>
                 </li>
               </ul>
@@ -161,11 +160,11 @@ const Footer = () => {
           >
             © 2023 Relume. All rights reserved.
           </p>
-          <div className="flex mt-4 space-x-3 md:mt-0">
+          <div className="flex mt-4 md:mt-0">
             <a
               href="#"
               style={{ fontFamily: "Satoshi" }}
-              className="underline  whitespace-nowrap text-[14px] leading-[20px] text-[#000] font-normal"
+              className="underline  whitespace-nowrap text-[14px] leading-[20px] text-[#000] font-normal mr-[24px]"
             >
               Privacy Policy
             </a>
@@ -173,7 +172,7 @@ const Footer = () => {
               href="#"
               c
               style={{ fontFamily: "Satoshi" }}
-              className="underline  whitespace-nowrap text-[14px] leading-[20px] text-[#000] font-normal"
+              className="underline  whitespace-nowrap text-[14px] leading-[20px] text-[#000] font-normal mr-[24px]"
             >
               Terms of Service
             </a>

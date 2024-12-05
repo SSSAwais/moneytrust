@@ -13,7 +13,7 @@ const Hero = () => {
         cartData.length > 0 ? "lg:min-h-[1150px]" : "lg:min-h-[881px]"
       }`}
     >
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 w-full flex  flex-col lg:flex-row items-center  pb-[352px]  mw-lg:items-start pt-[220px] mw-lg:pt-[75px] mw-lg:pb-[150px] mw-md:pt-[0px] mw-md:pb-[100px] mw-sm4:pb-[50px] mw-md:pr-[0px]">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 w-full flex  flex-col lg:flex-row items-center  pb-[352px]  mw-lg:items-start pt-[220px] mw-lg:pt-[75px] mw-lg:pb-[150px] mw-md:pt-[0px] mw-md:pb-[100px] mw-sm4:pb-[50px] mw-md:pr-[20px]">
         <div className="w-[60%] mw-12:w-[55%] mw-lg:w-[100%] mw-lg:mb-[50px] mw-sm4:mb-[20px]">
           <div className="flex items-center space-x-4 text-sm mw-md:pt-[22px]">
             <div className="mb-[14px] flex">
