@@ -30,24 +30,24 @@ export default function Home() {
 
   const chooseArray = [
     {
-      icon: "",
+      icon: "/Images/choose/1.svg",
       title: "Secure and Reliable",
-      desc: "We are regulated by FINTRAC and have a segregated account at major Canadian financial institution. With our state-of-the-art currency order management system, you are at a relief by using an extremely secure service.",
+      desc: "We are a FINTRAC-regulated company partnered with a leading Canadian payment processor. With our state-of-the-art currency order management system, you can rely on an extremely secure and efficient service that ensures your peace of mind.",
     },
     {
-      icon: "",
+      icon: "/Images/choose/4.svg",
       title: "Responsive Staff",
-      desc: "Our Staff is well trained to handle multiple queries at a time, you will be pleased with our customer management experience, your satisfaction is our top priority.",
+      desc: "Our professional team is highly trained to handle multiple queries efficiently. Whether you need assistance with a transfer or have questions about our services, we prioritize your satisfaction with top-notch customer support.",
     },
     {
-      icon: "",
+      icon: "/Images/choose/2.svg",
       title: "Fast Service",
-      desc: "We offer same day delivery of funds to your desired destination if booked before bank cut-off.Our instant money transfer service takes less time than you would usually imagine.",
+      desc: "Enjoy same-day delivery of funds to your desired destination when booked before the bank cut-off time. Our instant money transfer service is designed for speed and efficiency, ensuring your money moves as quickly as you need it.",
     },
     {
-      icon: "",
+      icon: "/Images/choose/4.svg",
       title: "Best Rate",
-      desc: "We guarantee to beat your bank’s exchange rate. You can save hundreds to thousands of dollars.",
+      desc: "Get the best exchange rates in the market. We guarantee rates better than your bank’s, helping you save hundreds to thousands of dollars on every transaction. Maximize your value with us!",
     },
   ];
 
@@ -90,16 +90,16 @@ export default function Home() {
 
   const TestimonialArray = [
     {
-      user: { img: Images.user.src, name: "Joaquin", job: "Banker" },
+      user: { img: "/Images/testimonial.png", name: "Joaquin", job: "Banker" },
       desc: "Just went in earlier at this branch. I really had a good deal in exchanging my US dollars to Canadian dollars. I definitely recommend to go here if you want to buy or sell USD. I believe they also have a great deal with buying/selling Euros as well. Thanks to the nice lady for accommodating my request to choose specific denominations that I want in CAD.",
     },
     {
-      user: { img: Images.user.src, name: "Deli raesi", job: "CEO of Solit" },
+      user: { img: "/Images/testimonial.png", name: "Deli raesi", job: "CEO of Solit" },
       desc: "One of money trust's standout features is its consistently low trading fees, which remain among the most competitive in the industry. This makes it an attractive choice for traders looking to minimize costs without compromising on quality or service",
     },
     {
       user: {
-        img: Images.user.src,
+        img: "/Images/women.svg",
         name: "Dasha Zukher",
         job: "Businessman",
       },
@@ -107,7 +107,7 @@ export default function Home() {
     },
     {
       user: {
-        img: Images.user.src,
+        img: '/Images/women.svg',
         name: "koray Yilma",
         job: "Enterpreuner",
       },
@@ -132,8 +132,7 @@ export default function Home() {
             Popular Countries Our <br /> Customers Send Money
           </h1>
           <p className="text-[24px] font-normal leading-[32px] text-[#1f1e21] opacity-80 pr-[90px] mw-14:text-[20px] mw-sm4:text-[16px] mw-sm5:text-[12px] mw-sm5:leading-[20px] mw-sm4:text-[#000] ">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-            vel cursus eros, a finibus nibh. Donec porttitor ligula nec
+          Our customers trust us to transfer money quickly and securely to their loved ones and businesses in top destinations worldwide, including Hong Kong, Canada, China, and the USA. No matter where you're sending money, we’ve got you covered
           </p>
         </div>
         <div className="w-[60%] mx-14:w-[65%] mw-lg:w-[100%]">
@@ -154,8 +153,7 @@ export default function Home() {
         </h1>
         <div className="flex justify-center">
           <p className="md:text-lg mt-2 text-center max-w-[600px] font-poppinss font-normal text-[#000]  mw-md:text-[16px] mw-sm5:text-[12px] mw-sm5:px-[34px]">
-            Mobile banking differs from mobile payments, which involves the use
-            of a mobile device.
+          Transferring money with us is simple and secure.Start your transfer now and experience the difference!
           </p>
         </div>
 
@@ -224,20 +222,13 @@ export default function Home() {
             Why Choose Us?
           </h1>
           <p className="text-[18px] pt-[26px] text-[#000] leading-[26px] font-normal mw-11:text-[16px] mw-11:leading-[22px] mw-md:text-[14px] mw-md:leading-[20px] mw-sm4:text-[12px] ">
-            When it comes to your currency exchange needs in North York,
-            Toronto, look no further than us. We understand the value of
-            accurate and speedy transactions at our exchange office, and our
-            committed team is always available to help you with a degree of
-            responsiveness that guarantees your peace of mind. Select us for
-            your currency exchange needs, and discover why we're the go-to
-            option in North York—our combination of security, dependability, and
-            quickness.
+          Conveniently located in the heart of downtown North York, we offer fast, reliable, and accurate currency exchange services with no hidden fees. Our experienced team ensures seamless transactions, providing peace of mind for all your money exchange needs. Select us for your currency exchange needs, and discover why we're the go-to option in North York—our combination of security, dependability, and quickness.
           </p>
           <section className=" grid grid-cols-1 mt-[72px] md:grid-cols-2 gap-3 mw-sm4:mt-[28px]">
             {chooseArray.map((item, i) => (
-              <div key={i} className="flex items-start mb-[12px]">
-                <img src={Images.checkGreen.src} className="mt-1" alt="" />
-                <div className="ml-[12px]">
+              <div key={i} className="flex items-start mb-[15px]">
+                <img src={item.icon} className="mt-1" alt="" />
+                <div className="ml-[12px] mt-[5px]">
                   <h1 className="font-medium text-[#091133] text-[16px] leading-[26px] mb-[6px] mw-sm4:text-[14px]">
                     {item.title}
                   </h1>
@@ -274,10 +265,9 @@ export default function Home() {
             </h1>
             <div className="flex justify-end flex-col items-end gap-2 mw-md:justify-start mw-md:items-start">
               <p className="sm:text-end text-start max-w-[500px] text-[#707070] mw-xl:text-[14px] mw-md:text-start ">
-                Quickly and easily send, receive and request money online with
-                Money Trust.
+               Effortlessly send, receive, and manage your money transfers with confidence using Money Trust's reliable and secure services.
               </p>
-              <button className="bg-[#1f3661] text-white hidden md:flex justify-center items-center md:gap-3 gap-2 whitespace-nowrap text-[16px] font-medium  md:px-6 px-3 py-3 rounded-full mt-[23px] mw-xl:text-[14px] mw-xl:py-[10px] mw-xl:px-[20px] ">
+              <button className="bg-[#94C99D] text-white hidden md:flex justify-center items-center md:gap-3 gap-2 whitespace-nowrap text-[16px] font-medium  md:px-6 px-3 py-3 rounded-full mt-[23px] mw-xl:text-[14px] mw-xl:py-[10px] mw-xl:px-[20px] ">
                 View More
                 <img src={Images.plus.src} className="h-5" alt="ico" />
               </button>
@@ -321,7 +311,7 @@ export default function Home() {
           <strong className="font-bold text-[16px] pb-[14px] font-Figtree leading-[16px] text-[#7CBD87] mw-md:hidden">
             Best plan
           </strong>
-          <h1 className="text-[38px] leading-[52px] font-bold text-[#0d0e10] mw-xl:text-[32px] mw-sm4:text-[26px] mw-sm5:text-[18px] mw-sm5:leading-[22px] mw-md:leading-[40px]">
+          <h1 className="text-[38px] leading-[52px] font-bold text-[#015180] mw-xl:text-[32px] mw-sm4:text-[26px] mw-sm5:text-[18px] mw-sm5:leading-[22px] mw-md:leading-[40px]">
             International Students <br /> Are Welcome
           </h1>
           <div className="flex flex-col  pt-[54px] mw-md:pt-[30px]">
@@ -345,7 +335,7 @@ export default function Home() {
                 </div>
               </div>
             ))}
-            <button className="bg-blue1 text-white w-fit flex justify-center items-center md:gap-3 gap-2 whitespace-nowrap text-[16px]   px-[33px] py-[20px] rounded-full font-Figtree font-bold mw-lg:text-[14px] mw-lg:py-[16px] mw-lg:px-[26px] mw-sm5:text-[12px] mw-sm5:py-[9px] mw-sm5:px-[11px]">
+            <button className="bg-blue1  text-white w-fit flex justify-center items-center md:gap-3 gap-2 whitespace-nowrap text-[16px]   px-[33px] py-[20px] rounded-full font-Figtree font-bold mw-lg:text-[14px] mw-lg:py-[16px] mw-lg:px-[26px] mw-sm5:text-[12px] mw-sm5:py-[9px] mw-sm5:px-[11px]">
               Discover More
               <GoArrowRight className="ml-[3px]" />
             </button>
@@ -371,7 +361,7 @@ export default function Home() {
           </div>
 
           <div className="w-[50%] mw-12:w-[62%] mw-lg:w-[100%]">
-            <h1 className="px-5 md:px-0 text-[38px] font-bold pb-[24px] leading-[30px] text-white mw-xl:text-[32px] mw-sm4:text-[26px] mw-sm5:text-[18px] mw-md:pl-[0px] mw-sm4:pb-[20px] mw-md:pt-[50px] mw-sm4:pt-[25px] ">
+            <h1 className="px-5 md:px-0 text-[38px] uppercase font-bold pb-[24px] leading-[30px] text-white mw-xl:text-[32px] mw-sm4:text-[26px] mw-sm5:text-[18px] mw-md:pl-[0px] mw-sm4:pb-[20px] mw-md:pt-[50px] mw-sm4:pt-[25px] ">
               Highlights Of Our Services
             </h1>
             <p className="px-5 md:px-0 text-[18px] font-normal font-poppinss leading-[35px] pr-[80px] mw-md:px-[0px] mw-sm4:text-[12px] mw-sm4:leading-[20px]">
@@ -497,7 +487,7 @@ export default function Home() {
                 <div className="pt-[30px] flex gap-3 pb-[40px] mw-sm4:pt-[10px] mw-sm4:pb-[10px] items-center">
                   <img
                     className="w-[50px] h-[50px]"
-                    src={"/Images/testimonial.png"}
+                    src={item.user.img}
                     alt=""
                   />
                   <div>

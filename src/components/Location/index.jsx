@@ -1,40 +1,26 @@
 "use client";
 import React from "react";
-import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import L from "leaflet";
+
+// Set the icon for the marker
+const DefaultIcon = L.icon({
+  iconUrl: "/images/map/marker-icon.png", // You need to provide your own marker icon
+  iconSize: [25, 25],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+
+L.Marker.prototype.options.icon = DefaultIcon;
 
 const Location = ({ item }) => {
-  const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "your_key",
-  });
+  const position = [0, 0]; // Default position, will be updated with the actual address
 
-  const mapContainerStyle = {
-    width: "100%",
-    height: "368px",
-  };
+  // Replace the coordinates with the actual ones for the address
+  const addressCoordinates = [  -37.80502615067402,144.9827446421601]; // Replace with actual latitude and longitude
 
-  if (loadError) {
-    console.error("Error loading Google Maps:", loadError);
-    return <p>Failed to load the map. Please try again later.</p>;
-  }
-
-  // Default coordinates (Dubai Marina, Dubai)
-  const defaultCenter = {
-    lat: 25.07725, // Latitude for Dubai Marina
-    lng: 55.13336, // Longitude for Dubai Marina
-  };
-
-  // const center = useMemo(
-  //   () => ({
-  //     lat: item?.latitude || defaultCenter.lat,
-  //     lng: item?.longitude || defaultCenter.lng,
-  //   }),
-  //   [item],
-  // );
-
-  const center = {
-    lat: item?.latitude || defaultCenter.lat,
-    lng: item?.longitude || defaultCenter.lng,
-  };
 
   return (
     <div className="max-w-full">
@@ -42,18 +28,20 @@ const Location = ({ item }) => {
         {item?.address || "Dubai Marina, Dubai, United Arab Emirates"}
       </div> */}
       <div className="relative h-[368px] min-w-full rounded bg-slate-400">
-        {!isLoaded ? (
-          <h1>Loading...</h1>
-        ) : (
-          <GoogleMap
-            mapContainerClassName="map-container"
-            center={center}
-            mapContainerStyle={mapContainerStyle}
-            zoom={12}
-          >
-            <Marker position={center} />
-          </GoogleMap>
-        )}
+      <MapContainer
+      className="z-10"
+      center={addressCoordinates}
+      zoom={14}
+      style={{ height: "400px", width: "100%" }}
+    >
+      <TileLayer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution="&copy; <a href=&quot;https://www.openstreetmap.org/copyright&quot;>OpenStreetMap</a> contributors"
+      />
+      <Marker position={addressCoordinates}>
+        <Popup></Popup>
+      </Marker>
+    </MapContainer>
       </div>
     </div>
   );
