@@ -124,9 +124,9 @@ const AddressSection = () => {
             />
           </div>
           <div className="flex flex-col pt-[24px] mw-sm4:pt-[8px]">
-            <labe className="font-lexand  font-light text-[14px] leading-[22px] text-[#334054] pb-[6px] mw-sm4:text-[12px]">
+            <label className="font-lexand  font-light text-[14px] leading-[22px] text-[#334054] pb-[6px] mw-sm4:text-[12px]">
               Message
-            </labe>
+            </label>
             <textarea
               rows={5}
               className="border-[#D0D5DD] border font-lexand text-[16px] font-light py-[12px] px-[16px] rounded-[8px] placeholder:font-lexand placeholder:text-[16px] placeholder:font-light placeholder:text-[#667085] text-[#667085] focus:outline-none mw-sm4:text-[12px] mw-sm4:py-[6px] mw-sm4:px-[10px] rounded-[4px] mw-sm4:placeholder:text-[12px]"
