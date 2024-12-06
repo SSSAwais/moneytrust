@@ -11,8 +11,8 @@ const page = () => {
   return (
     <div className="">
       <PagesHero page={"Contact Us"} />
-      {/* previous code commented started here */}
-
+      {/* previous code comlnlkmented started here */}
+      {/* jkdfjkdjfkdjfj */}
       {/* <section className="bg-white container mx-auto py-12 px-6">
                 <div className="max-w-3xl mx-auto text-center">
                     <h2 className="text-xl sm:text-3xl font-extrabold text-gray-800 mb-4">
