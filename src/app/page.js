@@ -278,14 +278,9 @@ export default function Home() {
               Our Services At A Glance
             </h1>
             <div className="flex justify-end flex-col items-end gap-2 mw-md:justify-start mw-md:items-start">
-<<<<<<< HEAD
-              <p className="sm:text-end text-start max-w-[500px] text-[#707070] mw-xl:text-[14px] mw-md:text-start ">
+              <p className="sm:text-end text-start max-w-[500px] text-[#707070] mw-xl:text-[12px] mw-md:text-start ">
                 Effortlessly send, receive, and manage your money transfers with
                 confidence using Money Trust's reliable and secure services.
-=======
-              <p className="sm:text-end text-start max-w-[500px] text-[#707070] mw-xl:text-[12px] mw-md:text-start ">
-               Effortlessly send, receive, and manage your money transfers with confidence using Money Trust's reliable and secure services.
->>>>>>> f574b00a7021dcd85236cba21a4e46f57f52a320
               </p>
               <button className="bg-[#94C99D] text-white hidden md:flex justify-center items-center md:gap-3 gap-2 whitespace-nowrap text-[16px] font-medium  md:px-6 px-3 py-3 rounded-full mt-[23px] mw-xl:text-[14px] mw-xl:py-[10px] mw-xl:px-[20px] ">
                 View More
